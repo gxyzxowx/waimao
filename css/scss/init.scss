@@ -1,0 +1,88 @@
+$c: red;
+
+
+// 长方形
+@mixin rect($w, $h){
+  width: $w;
+  height: $h;
+}
+// 正方形
+@mixin square($w){
+  width: $w;
+  height: $w;
+}
+// 正方形带图
+@mixin squareBg($w, $url){
+  width: $w;
+  height: $w;
+  background-image: url($url);
+  background-size: 100% 100%;
+  background-position: center;
+}
+// 长方形带图
+@mixin rectBg($w, $h, $url){
+  width: $w;
+  height: $h;
+  background-image: url($url);
+  background-size: 100% 100%;
+  background-position: center;
+}
+// 背景图
+@mixin bg($url){
+  background-image: url($url);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+// 字体快写
+@mixin font($size, $color){
+  font-size: $size;
+  color: $color;
+}
+body,
+header,
+section,
+footer,
+div,
+ul,
+ol,
+li,
+img,
+a,
+span,
+em,
+del,
+legend,
+center,
+strong,
+var,
+fieldset,
+form,
+label,
+dl,
+dt,
+dd,
+cite,
+input,
+hr,
+time,
+mark,
+code,
+figcaption,
+figure,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
