@@ -1,4 +1,18 @@
 @import "init.scss";
+@font-face
+{
+font-family: "azhu";
+src: url('../../font/azhu.ttf');
+    //  url('Sansation_Bold.eot'); /* IE9+ */
+font-weight:bold;
+}
 body{
   color:$c;
+  font-family: "azhu";
+  font-size: 50px;
+}
+@media only screen and (max-width: 640px) {
+ body{
+   color: blue;
+ }
 }
