@@ -6,13 +6,227 @@ src: url('../../font/azhu.ttf');
     //  url('Sansation_Bold.eot'); /* IE9+ */
 font-weight:bold;
 }
+
+
+
 body{
-  color:$c;
-  font-family: "azhu";
-  font-size: 50px;
+  .center{  //居中盒子
+    margin: auto;
+    width: 100%;
+  }
+ 
+ .nav-box2-ul{ //导航栏下导航条
+     
+     overflow: hidden;
+     margin-left: 25%;
+     li{
+       float: left;
+       line-height: 120px;
+       margin-left: 53px;
+
+       a{
+        width:453px;
+        height:14px;
+        font-size:18px;
+        font-family:Source Han Sans CN;
+        font-weight:bold;
+        color:#333333;
+        position: relative;
+        cursor:pointer ;
+       }
+       .a-default:before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        left:30%;
+        bottom: -5px;
+        border-top: 3px solid rgba(57,81,143,1);
+        
+      }
+    
+       .a-default{
+        width:55px;
+        height:15px;
+        font-size:18px;
+        font-family:Source Han Sans CN;
+        font-weight:bold;
+        color:rgba(57,81,143,1);
+       };
+     };
+
+     li:first-child{
+      margin-left: 0px;
+    }
+  };
+  //轮播图
+  .carousel{
+    height: 660px;
+    width: 100%;
+    background-image:url(/img/banner.png);
+  };
+
+  // 内容开始
+   .section{
+    overflow: hidden;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 1);
+    .section-box1{
+       width:1400px;
+       height: 704px;
+       margin: 0 auto;
+       background:rgba(255,255,255,1);
+       box-shadow:0px 7px 7px 0px rgba(0, 0, 0, 0.17);
+       text-align: center;
+      h4{
+       padding-top: 60px;
+       font-size:18px;
+      font-family:PingFang SC;
+      font-weight:bold;
+      text-decoration:underline;
+      color:rgba(57,81,143,1);
+      };
+      h3{
+        font-size:36px;
+        font-family:Raleway;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        line-height:60px;
+      };
+      p{
+        text-indent: 1em;
+        width:1052px;
+         height:78px;
+        font-size:32px;
+        margin-left: 170px;
+        font-family:PingFang SC;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+      };
+       ul{
+         width:90%;
+         float: left;
+         display: flex;
+         justify-content: space-around;
+         flex-wrap: nowrap;
+         margin-left: 5%;
+         margin-top: 50px;
+         li{
+          width:290px;
+          height:362px;
+          background:rgba(255,255,255,1);
+          border:1px solid rgba(225, 225, 225, 1);
+          box-shadow:0px 4px 13px 0px rgba(0, 0, 0, 0.12);
+          div:first-child{
+            img{
+              margin-top: 8px ;
+            }
+
+          }
+          div:last-child{
+            margin-top: 20px;
+            span{
+              float: left;
+              margin-left: 10px;
+            }
+            img{
+              vertical-align: middle;
+             float: right;
+            margin-right: 10px;
+            }
+
+          }
+         
+         }
+       }
+
+    }
+    .section-box2{
+    
+      width:1400px;
+      height: 704px;
+      margin: 0 auto;
+      background:rgba(255,255,255,1);
+      text-align: center;
+      h4{
+        padding-top: 60px;
+        font-size:18px;
+       font-family:PingFang SC;
+       font-weight:bold;
+       text-decoration:underline;
+       color:rgba(57,81,143,1);
+       };
+       h3{
+         font-size:36px;
+         font-family:Raleway;
+         font-weight:400;
+         color:rgba(51,51,51,1);
+         line-height:60px;
+       };
+       p{
+         text-indent: 1em;
+         width:1052px;
+          height:78px;
+         font-size:32px;
+         margin-left: 170px;
+         font-family:PingFang SC;
+         font-weight:800;
+         color:rgba(51,51,51,1);
+       };
+     .video-box{
+      display: flex;
+      justify-content: center;
+      flex-wrap:nowrap;
+       margin: 0 auto;
+       height: 50px;
+      
+     
+       .video-box1{
+          width: 600px;
+          height: 450px;
+          background-image: url(/img/about-img.png);
+          position: relative;
+          float: left;
+          img{
+            position: absolute;
+            top: 150px;
+            left: 230px;
+          }
+       }
+        .video-box2{
+          margin-left: 50px;
+        width:550px;
+        height:357px;
+        font-size:15px;
+        font-family:Source Han Sans CN;
+        font-weight:400;
+        color:rgba(131,131,131,1);
+        float: left;
+        text-align: justify;
+        text-indent: 4em;
+        }
+     }
+    }
+
+    .section-box3{
+      // width: 100%;
+      // height: 890px;
+      // background-image: url(/img/capabilrly-bg.png);
+      // background-position: center;
+      // background-size: 100% 100%;
+      // background-repeat: no-repeat;
+     
+       @include rectBg(100%, 890px, '../../img/capabilrly-bg.png')
+      
+    }
+
+   }
+  
+
+
+
 }
-@media only screen and (max-width: 640px) {
- body{
-   color: blue;
- }
-}
+// @media only screen and (max-width: 640px) {
+//  body{
+//    color: blue;
+//  }
+// }

@@ -1,6 +1,7 @@
 $c: red;
 
 
+
 // 长方形
 @mixin rect($w, $h){
   width: $w;
@@ -82,7 +83,105 @@ p {
   border: 0;
   padding: 0;
   font-style: normal;
+  text-decoration: none;
 }
 li {
   list-style: none;
+}
+
+//定位发送邮箱
+.email-us{
+   position: fixed;
+   top: 750px;
+   right: 20px;
+   img{
+     width: 48px;
+      vertical-align: middle;
+    }
+    span{
+      font-size:16px;
+      font-family:PingFang SC;
+      font-weight:bold;
+      color:rgba(51,51,51,1);
+    }
+
+}
+
+ //头部导航栏
+nav.com-nav{
+  width: 100%;
+  height: 120px;
+  background-color: #FFFFFFFF;
+  float: left;
+  background:rgba(255,255,255,1);
+  position: fixed;
+  z-index: 9;
+     .nav-box1{
+      width:655px;
+      height:140px;
+      float: left;
+      position: relative;
+      background:rgba(27,28,56,1);
+      transform: skewX(-10deg);
+      right: 20px;
+      box-shadow:4px 4px 0px 8px rgba(87, 88, 88,0.5);
+        img{
+          width: 200px;
+          height: 55px;
+          position: absolute;
+          top: 43px;
+          right:55px ;
+        } 
+     }
+     .nav-box2{
+       float: left;
+      height:120px;
+      width: calc(100% - 655px);
+    
+      margin: 0 auto;
+      
+     }
+     .nav-box2-ul{ //导航栏下导航条
+   
+      overflow: hidden;
+      margin-left: 25%;
+      li{
+        float: left;
+        line-height: 120px;
+        margin-left: 53px;
+ 
+        a{
+         width:453px;
+         height:14px;
+         font-size:18px;
+         font-family:Source Han Sans CN;
+         font-weight:bold;
+         color:#333333;
+         position: relative;
+         cursor:pointer ;
+        }
+        .a-default:before {
+         content: '';
+         position: absolute;
+         width: 40%;
+         left:30%;
+         bottom: -5px;
+         border-top: 3px solid rgba(57,81,143,1);
+         
+       }
+     
+        .a-default{
+         width:55px;
+         height:15px;
+         font-size:18px;
+         font-family:Source Han Sans CN;
+         font-weight:bold;
+         color:rgba(57,81,143,1);
+        };
+      };
+ 
+      li:first-child{
+       margin-left: 0px;
+     }
+   };
 }
