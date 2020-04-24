@@ -27,6 +27,7 @@ $c: red;
   background-image: url($url);
   background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 // 背景图
 @mixin bg($url){
@@ -131,13 +132,14 @@ nav.com-nav{
           position: absolute;
           top: 43px;
           right:55px ;
+          transform: skewX(10deg);
         } 
      }
      .nav-box2{
        float: left;
       height:120px;
       width: calc(100% - 655px);
-    
+      overflow: hidden;
       margin: 0 auto;
       
      }
@@ -184,4 +186,19 @@ nav.com-nav{
        margin-left: 0px;
      }
    };
+}
+//底部版块
+.footer{
+@include rect(100%,500px);
+  background:rgba(27,28,56,1);
+  ul{
+    overflow: hidden;
+    width: 100%;
+    
+    li{
+      width: 50%;
+      float: left;
+    }
+    
+  }
 }
