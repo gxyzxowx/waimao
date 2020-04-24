@@ -47,6 +47,7 @@
   background-image: url($url);
   background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 // 背景图
@@ -179,48 +180,85 @@ nav.com-nav {
 
     li {
       float: left;
-      line-height: 120px;
-      margin-left: 53px;
-
-      a {
-        width: 453px;
-        height: 14px;
-        font-size: 18px;
-        font-family: Source Han Sans CN;
-        font-weight: bold;
-        color: #333333;
-        position: relative;
-        cursor: pointer;
-      }
-
-      .a-default:before {
-        content: '';
-        position: absolute;
-        width: 40%;
-        left: 30%;
-        bottom: -5px;
-        border-top: 3px solid rgba(57, 81, 143, 1);
-
-      }
-
-      .a-default {
-        width: 55px;
-        height: 15px;
-        font-size: 18px;
-        font-family: Source Han Sans CN;
-        font-weight: bold;
-        color: rgba(57, 81, 143, 1);
-      }
-
-      ;
+      position: relative;
+      background:rgba(27,28,56,1);
+      transform: skewX(-10deg);
+      right: 20px;
+      box-shadow:4px 4px 0px 8px rgba(87, 88, 88,0.5);
+        img{
+          width: 200px;
+          height: 55px;
+          position: absolute;
+          top: 43px;
+          right:55px ;
+          transform: skewX(10deg);
+        } 
+     }
+     .nav-box2{
+       float: left;
+      height:120px;
+      width: calc(100% - 655px);
+      overflow: hidden;
+      margin: 0 auto;
+      
+     }
+     .nav-box2-ul{ //导航栏下导航条
+   
+      overflow: hidden;
+      margin-left: 25%;
+      li{
+        float: left;
+        line-height: 120px;
+        margin-left: 53px;
+ 
+        a{
+         width:453px;
+         height:14px;
+         font-size:18px;
+         font-family:Source Han Sans CN;
+         font-weight:bold;
+         color:#333333;
+         position: relative;
+         cursor:pointer ;
+        }
+        .a-default:before {
+         content: '';
+         position: absolute;
+         width: 40%;
+         left:30%;
+         bottom: -5px;
+         border-top: 3px solid rgba(57,81,143,1);
+         
+       }
+     
+        .a-default{
+         width:55px;
+         height:15px;
+         font-size:18px;
+         font-family:Source Han Sans CN;
+         font-weight:bold;
+         color:rgba(57,81,143,1);
+        };
+      };
+ 
+      li:first-child{
+       margin-left: 0px;
+     }
+   };
+}
+//底部版块
+.footer{
+@include rect(100%,500px);
+  background:rgba(27,28,56,1);
+  ul{
+    overflow: hidden;
+    width: 100%;
+    
+    li{
+      width: 50%;
+      float: left;
     }
-
-    ;
-
-    li:first-child {
-      margin-left: 0px;
-    }
+    
   }
 
-  ;
-}
+}}

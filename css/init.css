@@ -93,12 +93,14 @@ nav.com-nav .nav-box1 img {
   position: absolute;
   top: 43px;
   right: 55px;
+  transform: skewX(10deg);
 }
 
 nav.com-nav .nav-box2 {
   float: left;
   height: 120px;
   width: calc(100% - 655px);
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -144,4 +146,20 @@ nav.com-nav .nav-box2-ul li .a-default {
 
 nav.com-nav .nav-box2-ul li:first-child {
   margin-left: 0px;
+}
+
+.footer {
+  width: 100%;
+  height: 500px;
+  background: #1b1c38;
+}
+
+.footer ul {
+  overflow: hidden;
+  width: 100%;
+}
+
+.footer ul li {
+  width: 50%;
+  float: left;
 }
