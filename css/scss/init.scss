@@ -1,45 +1,69 @@
-$c: red;
+// 引入字体
+@font-face {
+  font-family: "pingfang_light";
+  src: url('../../font/pingfang_light.ttf');
+}
 
+@font-face {
+  font-family: "pingfang_bold";
+  src: url('../../font/pingfang_bold.ttf');
+}
 
+@font-face {
+  font-family: "pingfang";
+  src: url('../../font/pingfang.ttf');
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url('../../font/raleway_regular.ttf');
+}
 
 // 长方形
-@mixin rect($w, $h){
+@mixin rect($w, $h) {
   width: $w;
   height: $h;
 }
+
 // 正方形
-@mixin square($w){
+@mixin square($w) {
   width: $w;
   height: $w;
 }
+
 // 正方形带图
-@mixin squareBg($w, $url){
+@mixin squareBg($w, $url) {
   width: $w;
   height: $w;
   background-image: url($url);
   background-size: 100% 100%;
   background-position: center;
 }
+
 // 长方形带图
-@mixin rectBg($w, $h, $url){
+@mixin rectBg($w, $h, $url) {
   width: $w;
   height: $h;
-  background-image: url($url);
-  background-size: 100% 100%;
-  background-position: center;
-}
-// 背景图
-@mixin bg($url){
   background-image: url($url);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+// 背景图
+@mixin bg($url) {
+  background-image: url($url);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 // 字体快写
-@mixin font($size, $color){
+@mixin font($size, $color) {
   font-size: $size;
   color: $color;
 }
+
 body,
 header,
 section,
@@ -85,40 +109,76 @@ p {
   font-style: normal;
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }
 
 //定位发送邮箱
-.email-us{
-   position: fixed;
-   top: 750px;
-   right: 20px;
-   img{
-     width: 48px;
-      vertical-align: middle;
-    }
-    span{
-      font-size:16px;
-      font-family:PingFang SC;
-      font-weight:bold;
-      color:rgba(51,51,51,1);
-    }
+.email-us {
+  position: fixed;
+  top: 750px;
+  right: 20px;
+
+  img {
+    width: 48px;
+    vertical-align: middle;
+  }
+
+  span {
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+  }
 
 }
 
- //头部导航栏
-nav.com-nav{
+//头部导航栏
+nav.com-nav {
   width: 100%;
   height: 120px;
   background-color: #FFFFFFFF;
   float: left;
-  background:rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   position: fixed;
   z-index: 9;
-     .nav-box1{
-      width:655px;
-      height:140px;
+
+  .nav-box1 {
+    width: 655px;
+    height: 140px;
+    float: left;
+    position: relative;
+    background: rgba(27, 28, 56, 1);
+    transform: skewX(-10deg);
+    right: 20px;
+    box-shadow: 4px 4px 0px 8px rgba(87, 88, 88, 0.5);
+
+    img {
+      width: 200px;
+      height: 55px;
+      position: absolute;
+      top: 43px;
+      right: 55px;
+    }
+  }
+
+  .nav-box2 {
+    float: left;
+    height: 120px;
+    width: calc(100% - 655px);
+
+    margin: 0 auto;
+
+  }
+
+  .nav-box2-ul {
+    //导航栏下导航条
+
+    overflow: hidden;
+    margin-left: 25%;
+
+    li {
       float: left;
       position: relative;
       background:rgba(27,28,56,1);
@@ -131,13 +191,14 @@ nav.com-nav{
           position: absolute;
           top: 43px;
           right:55px ;
+          transform: skewX(10deg);
         } 
      }
      .nav-box2{
        float: left;
       height:120px;
       width: calc(100% - 655px);
-    
+      overflow: hidden;
       margin: 0 auto;
       
      }
@@ -273,3 +334,19 @@ nav.com-nav{
       }
   }
 }
+//底部版块
+.footer{
+@include rect(100%,500px);
+  background:rgba(27,28,56,1);
+  ul{
+    overflow: hidden;
+    width: 100%;
+    
+    li{
+      width: 50%;
+      float: left;
+    }
+    
+  }
+
+}}

@@ -1,0 +1,13 @@
+@import 'init.scss';
+@font-face
+{
+font-family: "pingfang_light";
+src: url('../../font/pingfang_light.ttf');
+font-weight:bold;
+}
+body{
+  .box{
+    font-family: "pingfang_light";
+  }
+  
+}
