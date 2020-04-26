@@ -64,19 +64,19 @@ body{
         .banner{
             width: 100%;
             height: 360px;
-            background-image: url(/img/banner2.png);
+            background-image: url("../../img/banner2.png");
             background-position: center center;
             text-align: center;
             padding-top: 136px;
             box-sizing: border-box;
             color: #ffffff;
-            font-family:TenSans;
+            font-family:"pingfang";
             .name{
                 font-size: 54px;
             }
             span{
                 font-size:16px;
-                font-family:PingFang SC;
+                font-family:"pingfang";
                 font-weight:500;
                 color: #ffffff;
             }
@@ -85,7 +85,7 @@ body{
             }
         }
         .com-inquiry{
-            background-image: url(/img/contact_us_bg.png);
+            background-image: url("../../img/contact_us_bg.png");
             background-position: center center;
             height: 656px;
             width: 100%;
@@ -94,7 +94,7 @@ body{
             margin-bottom: 60px;
             .title{
                 font-size:48px;
-                font-family:PingFang SC;
+                font-family:"pingfang";
                 font-weight:bold;
                 color:rgba(27,28,56,1);
                 text-align: center;
@@ -158,7 +158,7 @@ body{
                         width: 100%;
                         height: 100%;
                         font-size:18px;
-                        font-family:PingFang SC;
+                        font-family:"pingfang";
                         font-weight:bold;
                         background:rgba(255,152,6,1);
                         color:rgba(255,255,255,1);
@@ -179,7 +179,7 @@ body{
                 .title{
                     width: 100%;
                     font-size:36px;
-                    font-family:PingFang SC;
+                    font-family:"pingfang";
                     font-weight:800;
                     color:rgba(51,51,51,1);
                     line-height:60px;
@@ -206,7 +206,7 @@ body{
                             margin-top: 40px;
                             .name{
                                 font-size:24px;
-                                font-family:Source Han Sans CN;
+                                font-family:"pingfang";
                                 font-weight:bold;
                                 color:rgba(57,81,143,1);
                                 margin-bottom: 5px;
@@ -214,7 +214,7 @@ body{
                             .text{
                                 font-size:18px;
                                 line-height:30px;
-                                font-family:PingFang SC;
+                                font-family:"pingfang";
                                 font-weight:500;
                                 color:rgba(51,51,51,1);
                                 margin-bottom: 20px;
@@ -245,7 +245,7 @@ body{
                     border:1px solid rgba(221, 221, 221, 1);
                     .title{
                         font-size:36px;
-                        font-family:PingFang SC;
+                        font-family:"pingfang";
                         font-weight:400;
                         color:rgba(51,51,51,1);
                         line-height:60px;
@@ -294,7 +294,7 @@ body{
                             height:60px;
                             background:rgba(57,81,143,1);
                             font-size:18px;
-                            font-family:PingFang SC;
+                            font-family:"pingfang";
                             font-weight:bold;
                             color:rgba(255,255,255,1);
                         }
