@@ -11,6 +11,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>首页</title>
   <link rel="stylesheet" href="./css/css/index.css">
+  <link rel="stylesheet"  href="./css/css/swiper.min.css">
+  <script src="/js/swiper.min.js"></script>
+  <script src="/js/index.js"></script>
 </head>
 <body>
   <div class="center">
@@ -21,18 +24,18 @@
       <div class="nav-box2">
         <ul class="nav-box2-ul">
           <li>
-            <a class="a-default" href="" title="">HOME</a>
+            <a  id="tiaozhuan" class="a-default" href="javascript:;" title="">HOME</a>
           </li>
           <li>  
-            <a href="" title="">PRODUCT</a>
+            <a href="javascript:;" title="">PRODUCT</a>
           </li>
           <li>
-            <a href="" title="">ABOUTE</a>
+            <a href="javascript:;" title="">ABOUTE</a>
           </li>
           <li>
-            <a href="" title="">CASEC</a>
+            <a href="javascript:;" title="">CASEC</a>
           </li> <li>
-            <a href="" title="">CONTACT</a>
+            <a href="javascript:;" title="">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -41,7 +44,19 @@
   </div>
      <!-- 轮播图 -->
     <div class="carousel"> 
-
+          
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./img/banner.png"></div>
+          <div class="swiper-slide"><img src="./img/img-2.png"></div>
+          <div class="swiper-slide"><img src="./img/img-3.png"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+      </div>
 
     </div>
     <!-- 内容开始 -->
@@ -63,11 +78,11 @@
         <ul>
           <li>
             <div>
-              <img src="/img/img-1.png"> 
+               <img src="/img/img-1.png"> 
             </div>
             <div>
               <span>liquid nitrogen tank</span>
-              <img src="/img/right.png">
+           <a href="" title=""> <img src="/img/right.png"></a>  
             </div>
           </li>
           <li>
@@ -77,7 +92,7 @@
             <div>
               <span>liquid nitrogen dosing 
                 machine</span>
-              <img src="/img/right.png">
+                <a href="" title=""> <img src="/img/right.png"></a>  
             </div>
           </li>
           <li>
@@ -87,7 +102,7 @@
             <div>
               <span>vacuum liquid nitrogen 
                 hose</span>
-              <img src="/img/right.png">
+                <a href="" title=""> <img src="/img/right.png"></a>  
             </div>
           </li>
           <li>
@@ -97,7 +112,7 @@
             <div>
               <span>vacuum liquid nitrogen
                 pipe</span>
-              <img src="/img/right.png">
+                <a href="" title=""> <img src="/img/right.png"></a>  
             </div>
           </li>
         </ul>
@@ -213,43 +228,50 @@
            <h3>Complete variety, high quality and low price</h3>
            <h2>The Company Adopts Perfect Quality Control And Management System</h2>
            <div>
-              <span>
+          
+              
+             <span class="dingbu">
+              <a href="#tiaozhuan"> 
                 <img src="/img/ico-top.png">
+              </a> 
               </span>
+          
            </div>
 
        </div>
 
    </section>
   <!-- 底部内容 -->
-    <footer class="footer">
-        <ul>
-         <li class="footer-li1">
-           <h4>
-            Useful Links
-           </h4>
-           <p>Product Catalogue</p>
-           <p>News</p>
-           <p>Contact Us</p>
+  <footer class="footer">
+    <ul>
+     <li class="footer-li1">
+       <h4>
+       <span> Useful Links</span>  
+       </h4>
+       <p><span></span> Product Catalogue</p>
+       <p><span></span>News</p>
+       <p><span></span>Contact Us</p>
 
-         </li>
-         <li class="footer-li2">
-           <p>
-            Company address: Company Address Company Address 
+     </li>
+     <li class="footer-li2">
+       <p>
+        Company address: Company Address Company Address 
+       </p> 
+       <p> Official website: XXXXXXXXXX</p>
+       <p> Tel: XXXXXXX</p>
+      
+     </li>
+    </ul>
+    <p class="p-icon">
+      <span>
+        Follow Us
+      </span>
+      <a href="" title=""> <img src="/img/twitter.png"></a>  
+      <a href="" title=""><img src="/img/facebook.png"> </a>
+      <a href="" title=""><img src="/img/google.png"> </a>
+      <a href="" title=""><img src="/img/inter.png"> </a>
+    </p>
+    <h5>Copyright © 2020 by **********| All rights reserved</h5>
 
-            Official website: XXXXXXXXXX
-            
-            Tel: XXXXXXX
-            
-            XXXXXXXXXXXXXXX
-           </p>
-         </li>
-        </ul>
-        <p>Follow Us</p>
-        <h5>Copyright © 2020 by **********| All rights reserved</h5>
-
-    </footer>
-
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</footer>
 </body>
-</html>
