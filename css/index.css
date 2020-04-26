@@ -417,6 +417,10 @@ body .carousel .swiper-slide img {
   height: 100%;
 }
 
+body .carousel .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 120px;
+}
+
 body .section {
   width: 100%;
 }
