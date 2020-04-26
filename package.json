@@ -1,7 +1,6 @@
 {
   "name": "03waimao",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -31,5 +30,14 @@
     "gulp-rev": "^9.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-usemin": "^0.3.30"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gxyzxowx/waimao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gxyzxowx/waimao/issues"
+  },
+  "homepage": "https://github.com/gxyzxowx/waimao#readme",
+  "description": ""
 }

@@ -10,6 +10,7 @@ font-weight:bold;
 
 
 body{
+    min-width: 1200px;
     .nav-wrap{  //居中盒子
         margin: auto;
         width: 100%;
@@ -136,8 +137,7 @@ body{
               }
            }
         .img-list{
-            max-width: 1200px;
-            min-width: 1200px;
+            width: 1200px;
             height: 285px;
             margin: 60PX auto;
             // display: flex;
