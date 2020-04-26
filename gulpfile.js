@@ -1,7 +1,7 @@
 /*
  * @Date         : 2020-03-11 11:55:40
  * @LastEditors  : 曾迪
- * @LastEditTime : 2020-04-22 11:42:34
+ * @LastEditTime : 2020-04-26 11:04:29
  * @FilePath     : \03waimao\gulpfile.js
  */
 // require('babel-polyfill');     //es6新API
@@ -13,11 +13,10 @@ const del = require('del');
 const plugins = require('gulp-load-plugins')();
 var rev = require('gulp-rev');//给合成的文件加MD5戳
 // 压缩js uglifyjs
-// 停用js
 function js(cb) {
   console.log('this is js scripts task');
   // 源文件
-  src('src/js/*.js')
+  src('./js/src/*.js')
     .pipe(plugins.babel(
       {
         presets: ['es2015']
@@ -26,7 +25,7 @@ function js(cb) {
     // 管道送入下一个环节：混淆JS代码
     .pipe(plugins.uglify())
     // 管道送入下一环节：输出dest（指定目标文件） 到dist目录
-    .pipe(dest('./dist/js'))
+    .pipe(dest('./js/dist'))
     .pipe(reload({ stream: true }));
   // 把传入的callback再执行一下，相当于告诉gulp方法已经执行完毕
   cb();
@@ -72,8 +71,8 @@ function build(cb) {
 // 监听这些文件的变化
 function watcher() {
   // watch('./*.html');
-  watch('src/js/*.js', js);
-  watch('script/use/*.js', concat);
+  watch('js/src/*.js', js);
+  // watch('script/use/*.js', concat);
   watch('css/scss/*.scss', css);
 }
 
@@ -103,7 +102,7 @@ exports.concat = concat;
 exports.default = series([
   // concat, //合成mixin.js
   // clean,
-  // js,   // uglify + babel
+  js,   // uglify + babel
   css,  // Sass转css + 自动前缀
   // serve, //浏览器自动刷新
   watcher
