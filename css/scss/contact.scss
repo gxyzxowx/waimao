@@ -10,6 +10,8 @@ font-weight:bold;
 
 
 body{
+    
+    min-width: 1200px;
     .nav-wrap{  //居中盒子
         margin: auto;
         width: 100%;
@@ -62,19 +64,19 @@ body{
         .banner{
             width: 100%;
             height: 360px;
-            background-image: url(/img/banner2.png);
+            background-image: url("../../img/banner2.png");
             background-position: center center;
             text-align: center;
             padding-top: 136px;
             box-sizing: border-box;
             color: #ffffff;
-            font-family:TenSans;
+            font-family:"pingfang";
             .name{
                 font-size: 54px;
             }
             span{
                 font-size:16px;
-                font-family:PingFang SC;
+                font-family:"pingfang";
                 font-weight:500;
                 color: #ffffff;
             }
@@ -82,7 +84,91 @@ body{
                 color: #FF8D47;
             }
         }
-       
+        .com-inquiry{
+            background-image: url("../../img/contact_us_bg.png");
+            background-position: center center;
+            height: 656px;
+            width: 100%;
+            padding-top: 48px;
+            box-sizing: border-box;
+            margin-bottom: 60px;
+            .title{
+                font-size:48px;
+                font-family:"pingfang";
+                font-weight:bold;
+                color:rgba(27,28,56,1);
+                text-align: center;
+            }
+            .input-wrap{
+                max-width: 1200px;
+                min-width: 1200px;
+                margin: 0 auto;
+                box-sizing: border-box;
+                .input-flex{
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                .input{
+                    height: 60px;
+                    line-height: 60px;
+                    // float: left;
+                    margin: 20px 0 20px 0;
+                    text-align: right;
+                    width: 600px;
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    .name{
+                        width: 100px;
+                        text-align: right;
+                    }
+                    input{
+                        background: none;
+                        height: 60px;
+                        width: 500px;
+                        margin-left: 10px;
+                        border:2px solid rgba(102,102,102,1);
+                        padding-left: 11px;
+                        box-sizing: border-box;
+                    }
+                    input:focus{
+                        outline:none;
+                        border:2px solid rgba(255,152,6,1);
+                    }
+                }
+                .max-ipt{
+                    max-width: 1090px;
+                    min-width: 1090px;
+                    margin-top: 40px;
+                    float: right;
+                    input{
+                        width: 100%;
+                        margin-left: 0;
+                    } 
+                }
+                .send{
+                    width: 502px;
+                    height: 60px;
+                    float: right;
+                    margin-top: 24px;
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        font-size:18px;
+                        font-family:"pingfang";
+                        font-weight:bold;
+                        background:rgba(255,152,6,1);
+                        color:rgba(255,255,255,1);
+                        border: none;
+                        outline:none;
+                        cursor: pointer;
+                    }
+                }
+            }
+          }
         .center-bottom{
             width: 100%;
             height: 719px;
@@ -93,7 +179,7 @@ body{
                 .title{
                     width: 100%;
                     font-size:36px;
-                    font-family:PingFang SC;
+                    font-family:"pingfang";
                     font-weight:800;
                     color:rgba(51,51,51,1);
                     line-height:60px;
@@ -120,7 +206,7 @@ body{
                             margin-top: 40px;
                             .name{
                                 font-size:24px;
-                                font-family:Source Han Sans CN;
+                                font-family:"pingfang";
                                 font-weight:bold;
                                 color:rgba(57,81,143,1);
                                 margin-bottom: 5px;
@@ -128,7 +214,7 @@ body{
                             .text{
                                 font-size:18px;
                                 line-height:30px;
-                                font-family:PingFang SC;
+                                font-family:"pingfang";
                                 font-weight:500;
                                 color:rgba(51,51,51,1);
                                 margin-bottom: 20px;
@@ -159,7 +245,7 @@ body{
                     border:1px solid rgba(221, 221, 221, 1);
                     .title{
                         font-size:36px;
-                        font-family:PingFang SC;
+                        font-family:"pingfang";
                         font-weight:400;
                         color:rgba(51,51,51,1);
                         line-height:60px;
@@ -208,7 +294,7 @@ body{
                             height:60px;
                             background:rgba(57,81,143,1);
                             font-size:18px;
-                            font-family:PingFang SC;
+                            font-family:"pingfang";
                             font-weight:bold;
                             color:rgba(255,255,255,1);
                         }
