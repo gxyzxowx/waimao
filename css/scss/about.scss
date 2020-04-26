@@ -63,20 +63,21 @@ body{
         .banner{
             width: 100%;
             height: 360px;
-            background-image: url(/img/banner2.png);
+            // background-image: url(/img/banner2.png);
+            background-image: url("../../img/banner2.png");
             background-repeat: no-repeat;
             background-position: center center;
             text-align: center;
             padding-top: 136px;
             box-sizing: border-box;
             color: #ffffff;
-            font-family:TenSans;
+            font-family:"pingfang";
             .name{
                 font-size: 54px;
             }
             span{
                 font-size:16px;
-                font-family:PingFang SC;
+                font-family:"pingfang";
                 font-weight:500;
                 color: #ffffff;
             }
@@ -88,7 +89,7 @@ body{
             margin-top: 60px;
             text-align: center;
             font-size:36px;
-            font-family:Raleway;
+            font-family:"Raleway";
             font-weight:400;
             color:rgba(51,51,51,1);
             line-height:60px;
@@ -96,7 +97,7 @@ body{
         .text2{
             text-align: center;
             font-size:36px;
-            font-family:PingFang SC;
+            font-family:"pingfang";
             font-weight:800;
             color:rgba(51,51,51,1);
             line-height:60px;
@@ -128,7 +129,7 @@ body{
                 width:550px;
                 height:357px;
                 font-size:15px;
-                font-family:Source Han Sans CN;
+                font-family:"pingfang";
                 font-weight:400;
                 color:rgba(131,131,131,1);
                 float: left;
