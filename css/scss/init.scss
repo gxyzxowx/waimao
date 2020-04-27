@@ -170,9 +170,8 @@ nav.com-nav {
   .nav-box2 {
     float: left;
     height: 120px;
-    width: calc(100% - 655px);    
+    width: calc(100% - 655px);
     overflow: hidden;
-    
     .nav-box2-ul{
       margin-left: 30%;
       li{
@@ -298,8 +297,10 @@ nav.com-nav {
       }
   }
 }
+
+
 //底部版块
-.footer{
+footer.footer{
   @include rect(100%,500px);
  background:rgba(27,28,56,1);
  position: relative;

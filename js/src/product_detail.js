@@ -1,7 +1,7 @@
 /*
  * @Date         : 2020-04-26 10:12:53
  * @LastEditors  : 曾迪
- * @LastEditTime : 2020-04-26 17:23:28
+ * @LastEditTime : 2020-04-27 10:20:29
  * @FilePath     : \03waimao\js\src\product_detail.js
  */
 
@@ -15,12 +15,12 @@ let init = () =>{
       title: 'Liquid Nitrogen Dosing Machinee',
       currentPicIndex: 0,
       navlist: [
-        {"name": "All Products", "href": "#products", "ifshow": true},
-        {"name": "Product parameters", "href": "#params", "ifshow": true},
-        {"name": "Structure diagram", "href": "#diagram", "ifshow": true},
-        {"name": "Factory strength", "href": "#factory", "ifshow": true},
-        {"name": "Detail display", "href": "#details", "ifshow": true},
-        {"name": "Packaging & transportation", "href": "#package", "ifshow": true},
+        {"name": "Hot Sale", "href": "#products", "ifshow": true},
+        {"name": "Parameter", "href": "#params", "ifshow": true},
+        {"name": "Working Flow", "href": "#diagram", "ifshow": true},
+        {"name": "Company Capability", "href": "#factory", "ifshow": true},
+        {"name": "Package", "href": "#details", "ifshow": true},
+        {"name": "Transport", "href": "#package", "ifshow": true},
         {"name": "FAQ", "href": "#FAQ", "ifshow": true}
       ],
       currentNavIndex: 0,
