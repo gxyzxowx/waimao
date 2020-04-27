@@ -1,0 +1,409 @@
+// 引入字体
+@font-face {
+  font-family: "pingfang_light";
+  src: url('../../font/pingfang_light.ttf');
+}
+
+@font-face {
+  font-family: "pingfang_bold";
+  src: url('../../font/pingfang_bold.ttf');
+}
+
+@font-face {
+  font-family: "pingfang";
+  src: url('../../font/pingfang.ttf');
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url('../../font/raleway_regular.ttf');
+}
+
+// 长方形
+@mixin rect($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+// 正方形
+@mixin square($w) {
+  width: $w;
+  height: $w;
+}
+
+// 正方形带图
+@mixin squareBg($w, $url) {
+  width: $w;
+  height: $w;
+  background-image: url($url);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+// 长方形带图
+@mixin rectBg($w, $h, $url) {
+  width: $w;
+  height: $h;
+  background-image: url($url);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// 背景图
+@mixin bg($url) {
+  background-image: url($url);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// 字体快写
+@mixin font($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+body,
+header,
+section,
+footer,
+div,
+ul,
+ol,
+li,
+img,
+a,
+span,
+em,
+del,
+legend,
+center,
+strong,
+var,
+fieldset,
+form,
+label,
+dl,
+dt,
+dd,
+cite,
+input,
+hr,
+time,
+mark,
+code,
+figcaption,
+figure,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.swiper-slide ,
+.swiper-container,
+.carousel,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+//定位发送邮箱
+.email-us {
+  position: fixed;
+  top: 750px;
+  right: 20px;
+
+  img {
+    width: 48px;
+    vertical-align: middle;
+  }
+
+  span {
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+  }
+
+}
+
+//头部导航栏
+nav.com-nav {
+  width: 100%;
+  height: 120px;
+  background-color: #FFFFFFFF;
+  float: left;
+  background: rgba(255, 255, 255, 1);
+  position: fixed;
+  z-index: 9;
+
+  .nav-box1 {
+    width: 655px;
+    height: 140px;
+    float: left;
+    position: relative;
+    background: rgba(27, 28, 56, 1);
+    transform: skewX(-10deg);
+    right: 20px;
+    box-shadow: 4px 4px 0px 8px rgba(87, 88, 88, 0.5);
+
+    img {
+      width: 200px;
+      height: 55px;
+      position: absolute;
+      top: 43px;
+      right: 55px;
+      transform: skewX(10deg);
+    }
+  }
+
+  .nav-box2 {
+    float: left;
+    height: 120px;
+    width: calc(100% - 655px);
+    overflow: hidden;
+    .nav-box2-ul{
+      margin-left: 30%;
+      li{
+        float: left;
+        font-size:18px;
+        font-family:PingFang SC;
+        font-weight:800;
+        line-height: 120px;
+        margin-left: 2%;
+        position: relative;
+        a{
+          font-size:18px;
+          font-family:PingFang SC;
+          font-weight:bold;
+          color:rgba(0, 0, 0, 0.48);
+        }
+        .a-default{
+          color: rgba(57, 81, 143, 1);
+        }
+
+        .a-default:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 35%;
+          left: 0;
+          width: 50%;
+          margin-left: 25%;
+          height: 4px;
+          background:rgba(57, 81, 143, 1);
+         
+        }
+
+      }
+    }
+
+  }
+}
+
+
+// input
+.com-inquiry{
+  background-image: url(/img/contact_us_bg.png);
+  background-position: center center;
+  height: 656px;
+  width: 100%;
+  padding-top: 48px;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  .title{
+      font-size:48px;
+      font-family:PingFang SC;
+      font-weight:bold;
+      color:rgba(27,28,56,1);
+      text-align: center;
+  }
+  .input-wrap{
+      max-width: 1200px;
+      min-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      .input-flex{
+          display: flex;
+          display: -webkit-flex;
+          justify-content: space-between;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
+      .input{
+          height: 60px;
+          line-height: 60px;
+          // float: left;
+          margin: 20px 0 20px 0;
+          text-align: right;
+          width: 600px;
+          display: flex;
+          display: -webkit-flex;
+          justify-content: space-between;
+          .name{
+              width: 100px;
+              text-align: right;
+          }
+          input{
+              background: none;
+              height: 60px;
+              width: 500px;
+              margin-left: 10px;
+              border:2px solid rgba(102,102,102,1);
+              padding-left: 11px;
+              box-sizing: border-box;
+          }
+          input:focus{
+              outline:none;
+              border:2px solid rgba(255,152,6,1);
+          }
+      }
+      .max-ipt{
+          max-width: 1090px;
+          min-width: 1090px;
+          margin-top: 40px;
+          float: right;
+          input{
+              width: 100%;
+              margin-left: 0;
+          } 
+      }
+      .send{
+          width: 502px;
+          height: 60px;
+          float: right;
+          margin-top: 24px;
+          input{
+              width: 100%;
+              height: 100%;
+              font-size:18px;
+              font-family:PingFang SC;
+              font-weight:bold;
+              background:rgba(255,152,6,1);
+              color:rgba(255,255,255,1);
+              border: none;
+              outline:none;
+              cursor: pointer;
+          }
+      }
+  }
+}
+
+
+//底部版块
+footer.footer{
+  @include rect(100%,500px);
+ background:rgba(27,28,56,1);
+ position: relative;
+ overflow: hidden;
+ 
+  ul{
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    
+    li{
+      width: 50%;
+      float: left;
+    }
+   .footer-li1 {
+      font-size: 16px;
+      font-family: Arial;
+      font-weight: 400;
+      color: white;
+      margin-top: 112px;
+     
+      h4 {
+        font-size: 26px;
+        font-family: Arial;
+        font-weight: 400;
+        color: white;
+        padding-left: 50%;
+        position: relative;
+        span:before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          width: 70px;
+          border-bottom: 3px solid rgba(33,188,216,1);
+          text-align: center;
+          height: 4px;
+         }
+      }
+     
+      p {
+        line-height: 40px;
+        padding-left: 50%;
+        span {
+          width: 25px;
+          height: 2px;
+          background: #21bcd8;
+          display: inline-block;
+          line-height: 40px;
+        }
+      }
+      p:nth-of-type(1) {
+        margin-top: 20px;
+      }
+    }
+    .footer-li2{
+      font-size:16px;
+      font-family:Source Han Sans CN;
+      font-weight:400;
+      color:rgba(255,255,255,1);
+      margin-top: 122px;
+      border-left: 3px solid white;
+      box-sizing: border-box;
+      p{
+        padding-left: 20%;
+         line-height: 40px;
+      }
+    }
+  }
+ 
+  .p-icon {
+    font-size:16px;
+    font-family:Arial;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    text-align: center;  
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    padding-top: 50px;
+    img {
+      vertical-align: middle;
+      margin-left: 10px;
+         
+    }
+  }
+
+  h5{
+    background:rgba(22,23,46,1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 62px;
+    width: 100%;
+    line-height: 62px;
+    text-align: center;
+    font-size:14px;
+    font-size:14px;
+    font-family:Source Han Sans CN;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+  }
+}
+
