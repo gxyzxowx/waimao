@@ -122,7 +122,7 @@ li {
   position: fixed;
   top: 750px;
   right: 20px;
-
+  z-index: 99;
   img {
     width: 48px;
     vertical-align: middle;
@@ -210,6 +210,197 @@ nav.com-nav {
 
   }
 }
+@media screen and (min-width:1300px) and (max-width:1500px){
+  nav.com-nav {
+    .nav-box2-ul{
+      margin-left: 10%;
+    .nav-box2 {
+      li{
+        a{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+}
+@media screen and (min-width:1200px) and (max-width:1350px){
+  nav.com-nav {
+    .nav-box2 {
+      .nav-box2-ul{
+        margin-left: 10%;
+      li{
+        a{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+}
+@media screen and (min-width:992px) and (max-width:1200px){
+  //头部导航栏媒体查询
+nav.com-nav {
+  width: 100%;
+  height: 120px;
+  .nav-box1 {
+    width: 550px;
+    height: 140px;
+    img {
+      width: 200px;
+      height: 55px;
+    }
+  }
+  .nav-box2 {
+    float: left;
+    height: 120px;
+    width: calc(100% - 550px);
+    overflow: hidden;
+    .nav-box2-ul{
+      margin-left: 10%;
+      li{
+        float: left;
+        font-family:PingFang SC;
+        font-weight:800;
+        line-height: 120px;
+        margin-left: 2%;
+        position: relative;
+        a{
+          font-size: 18px;
+          font-family:PingFang SC;
+          font-weight:bold;
+        }
+
+        .a-default:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 35%;
+          left: 0;
+          width: 50%;
+          margin-left: 25%;
+          height: 4px;
+        }
+
+      }
+    }
+
+  }
+}
+
+
+}
+
+@media screen and (min-width:992px) and (max-width:1100px){
+  nav.com-nav {
+  
+    .nav-box1 {
+      width: 450px;
+      height: 140px;
+      img {
+        width: 200px;
+        height: 55px;
+       
+      }
+    }
+  
+    .nav-box2 {
+      float: left;
+      height: 120px;
+      width: calc(100% - 450px);
+      overflow: hidden;
+      .nav-box2-ul{
+        margin-left: 10%;
+      li{
+        a{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+}
+
+@media screen and (min-width:600px) and (max-width:992px){
+  nav.com-nav {
+    height: 70px;
+    .nav-box1 {
+      height: 70px;
+      width: 30%;
+      height: 70px;
+      img {
+        width: 50px;
+        height: 20px;
+        top: 20px;
+      }
+    }
+  
+    .nav-box2 {
+      float: left;
+      height: 70px;
+      width: calc(100% - 30%);
+      overflow: hidden;
+      .nav-box2-ul{
+        margin-left: 10%;
+      li{
+        line-height: 70px;
+        a{
+          font-size: 15px;
+        }
+        .a-default:after {
+          
+          bottom: 30%;
+          left: 0;
+         
+        }
+      }
+    }
+  }
+}
+
+}
+@media screen and  (max-width:600px) {
+  nav.com-nav {
+    height: 70px;
+    .nav-box1 {
+      height: 70px;
+      width: 30%;
+      height: 70px;
+      img {
+        width: 50px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+      }
+    }
+  
+    .nav-box2 {
+      float: left;
+      height: 70px;
+      width: calc(100% - 30%);
+      overflow: hidden;
+      .nav-box2-ul{
+        margin-left: 0%;
+      li{
+        line-height: 70px;
+        a{
+          font-size: 14px;
+        }
+        .a-default:after {
+          bottom: 30%;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+}
+
+
+
+
 
 // input
 .com-inquiry{
@@ -414,3 +605,182 @@ footer.footer{
   }
 }
 
+//弹出框
+
+  .detainment{
+     @include rect(100%,100%);
+      background:rgba(0,0,0,0.3);
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99;
+      display: none;
+   
+      .detainment-1{  //第一个弹出的内容
+        background-image: url(/img/contact_us_bg.png);
+        background-position: center center;
+        height: 656px;
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 48px;
+        box-sizing: border-box;
+        margin-bottom: 60px;
+        position: absolute;
+        left: 0;
+        top: 15%;
+        
+        .title{
+            font-size:48px;
+            font-family:PingFang SC;
+            font-weight:bold;
+            color:rgba(27,28,56,1);
+            text-align: center;
+        }
+        .input-wrap{
+            width: 90%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            .input-flex{
+                display: flex;
+                display: -webkit-flex;
+                justify-content: space-between;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .input{
+                height: 60px;
+                line-height: 60px;
+                // float: left;
+                margin: 20px 0 20px 0;
+                text-align: right;
+                width: 45%;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: space-between;
+                .name{
+                    width: 100px;
+                    text-align: right;
+                }
+                input{
+                    background: none;
+                    height: 60px;
+                    width: 90%;
+                    margin-left: 10%;
+                    border:2px solid rgba(102,102,102,1);
+                    padding-left: 11px;
+                    box-sizing: border-box;
+                }
+                input:focus{
+                    outline:none;
+                    border:2px solid rgba(255,152,6,1);
+                }
+            }
+            .max-ipt{
+               width: 90%;
+               margin-left: 10%;
+                margin-top: 40px;
+                float: right;
+                input{
+                    width: 100%;
+                    margin-left: 0;
+                } 
+            }
+            .send{
+               width: 45%;
+                height: 60px;
+               margin: 0 auto;
+                input{
+                    width: 100%;
+                    height: 100%;
+                    font-size:18px;
+                    font-family:PingFang SC;
+                    font-weight:bold;
+                    background:rgba(255,152,6,1);
+                    color:rgba(255,255,255,1);
+                    border: none;
+                    outline:none;
+                    cursor: pointer;
+                    margin-top: 20px;
+
+                }
+            }
+        }
+      }
+
+
+    .detainment-2{  //第二次弹出的内容
+      display: none;
+      position: absolute;
+      z-index: 999;
+      opacity: 1;
+      margin-top: 60px;
+      width: 80%;
+      margin-left: 10%;
+      height:188px;
+      background:rgba(255,255,255,1);
+      border:1px solid rgba(221, 221, 221, 1);
+      top: calc(50% - 188px);
+      .title{
+          font-size:36px;
+          font-family:"pingfang";
+          font-weight:400;
+          color:rgba(51,51,51,1);
+          line-height:60px;
+          text-align: center;
+          margin-bottom: 30px;
+          img{
+            vertical-align: middle;
+          float: right;
+          }
+      }
+      .email{
+          height: 60px;
+          line-height: 60px;
+          margin-left: 60px;
+          display: inline-block;
+          .input{
+              float: left;
+          }
+          input{
+              width:418px;
+              height:60px;
+              margin: 0;
+              border:2px solid rgba(204,204,204,1);
+              padding-left: 10px;
+              box-sizing: border-box;
+              margin-left: 20px;
+          }
+          input:focus{
+              outline:none;
+              border:2px solid rgba(255,152,6,1);
+          }
+          .icon{
+              float: left;
+              margin-top: 3px;
+              margin-left: 20px;
+              width: 54px;
+              height: 58px;
+              background-image: url(/img/pdf.png);
+              background-repeat: no-repeat;
+          }
+      }
+      .send{
+          margin-right: 60px;
+          width:210px;
+          height:60px;
+          display: block;
+          float: right;
+          input{
+              width:210px;
+              height:60px;
+              background:rgba(57,81,143,1);
+              font-size:18px;
+              font-family:"pingfang";
+              font-weight:bold;
+              color:rgba(255,255,255,1);
+          }
+      }
+  }
+ 
+
+  }

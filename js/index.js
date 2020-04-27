@@ -1,6 +1,7 @@
 window.onload=function(){
   //轮播图代码
- var swiper = new Swiper('.swiper-container', {
+ 
+ var swiperr = new Swiper('.swiper-container', {
    spaceBetween: 9,
    centeredSlides: true,
    autoplay: {
@@ -34,11 +35,11 @@ var  clicklia=document.querySelectorAll("nav.com-nav .nav-box2 .nav-box2-ul li a
   }
  
 // 回到顶部
-    var  btn=document.querySelector(".dingbu");
+    var  btnn=document.querySelector(".dingbu");
      var screenTop=null, te=null; 
      window.onscroll = function(){
        screenTop = document.documentElement.scrollTop;
-       btn.onclick=function(){
+       btnn.onclick=function(){
              clearInterval(te);
              te=setInterval(function( ){
              screenTop=screenTop-50;
