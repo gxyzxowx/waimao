@@ -16,6 +16,7 @@ window.onload=function(){
      nextEl: '.swiper-button-next',
      prevEl: '.swiper-button-prev',
    },
+   
  });
 //导航栏伪类的切换
 var  clickli=document.querySelectorAll("nav.com-nav .nav-box2 .nav-box2-ul li");
