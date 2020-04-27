@@ -6,6 +6,7 @@ window.onload=function(){
    autoplay: {
      delay: 4000,
      disableOnInteraction: false,
+     color:"red",
    },
    pagination: {
      el: '.swiper-pagination',

@@ -48,7 +48,9 @@ body{
       }
   
     }
-
+    .swiper-container-horizontal>.swiper-pagination-bullets{
+      bottom: 120px;
+    }
 
   };
 
@@ -114,7 +116,7 @@ body{
             overflow: hidden;
           }
           div:first-child{
-            
+
             img{
               margin-top: 8px ;
               transition: all 1s;
