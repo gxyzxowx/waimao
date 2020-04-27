@@ -146,7 +146,7 @@ nav.com-nav {
   background: rgba(255, 255, 255, 1);
   position: fixed;
   z-index: 9;
-
+  box-shadow:0px 0px 4px 0px rgba(0, 0, 0, 0.48);
   .nav-box1 {
     width: 655px;
     height: 140px;
@@ -210,7 +210,6 @@ nav.com-nav {
 
   }
 }
-
 
 // input
 .com-inquiry{
@@ -330,6 +329,7 @@ footer.footer{
         color: white;
         padding-left: 50%;
         position: relative;
+        cursor: pointer;
         span:before {
           content: "";
           display: block;
@@ -340,18 +340,22 @@ footer.footer{
           border-bottom: 3px solid rgba(33,188,216,1);
           text-align: center;
           height: 4px;
+          cursor: pointer;
          }
       }
      
       p {
         line-height: 40px;
         padding-left: 50%;
-        span {
+        .footer-p-span-glide {
           width: 25px;
           height: 2px;
           background: #21bcd8;
           display: inline-block;
           line-height: 40px;
+        }
+        span{
+          cursor: pointer;
         }
       }
       p:nth-of-type(1) {
@@ -369,6 +373,7 @@ footer.footer{
       p{
         padding-left: 20%;
          line-height: 40px;
+         cursor: pointer;
       }
     }
   }
@@ -383,6 +388,7 @@ footer.footer{
     width: 100%;
     height: 50px;
     padding-top: 50px;
+    cursor: pointer;
     img {
       vertical-align: middle;
       margin-left: 10px;
@@ -404,6 +410,7 @@ footer.footer{
     font-family:Source Han Sans CN;
     font-weight:bold;
     color:rgba(255,255,255,1);
+    cursor: pointer;
   }
 }
 
