@@ -23,7 +23,13 @@ body{
     .swiper-container {
       width: 100%;
       height: 100%;
-    
+      .swiper-pagination-bullet-active { //轮播图小圆点的切换色
+        background-color: white;
+      }
+      
+      .swiper-pagination-bullet{
+        @include rect(15px,15px);
+      }
     }
     .swiper-slide {
       text-align: center;
@@ -46,7 +52,7 @@ body{
         width: 100%;
         height: 100%;
       }
-  
+    
     }
     .swiper-container-horizontal>.swiper-pagination-bullets{
       bottom: 120px;
@@ -116,15 +122,22 @@ body{
             overflow: hidden;
           }
           div:first-child{
-
-            img{
-              margin-top: 8px ;
-              transition: all 1s;
-            }
-            img:hover{
-                transform: scale(1.4);
-              
+            div{
+              @include rect(96% ,100%);
+              margin-left: 2%;
+              img{
+                margin-top: 8px ;
+                transition: all 1s;
+                @include rect(100% ,100%);
+                margin: 0 auto;
               }
+              img:hover{
+                  transform: scale(1.4);
+                
+                }
+
+            }
+
           }
           div:last-child{
             margin-top: 20px;
