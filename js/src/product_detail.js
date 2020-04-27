@@ -1,7 +1,7 @@
 /*
  * @Date         : 2020-04-26 10:12:53
  * @LastEditors  : 曾迪
- * @LastEditTime : 2020-04-27 10:20:29
+ * @LastEditTime : 2020-04-27 14:21:50
  * @FilePath     : \03waimao\js\src\product_detail.js
  */
 
@@ -47,7 +47,7 @@ let init = () =>{
       "desc": "Product introduction Product introductioning",
     "img": "img/img-2.png"},
     {"title": "Category title",
-      "desc": "Product introduction Product introductioning",
+      "desc": "Product introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioningProduct introduction Product introductioning",
     "img": "img/img-4.png"},
       ],
       currentProductIndex: -1
@@ -72,6 +72,10 @@ let init = () =>{
       }
     },
   })
+}
+
+let outPage = () => {
+  // alert(2)
 }
 
 // document.addEventListener('DOMContentLoaded', ()=>{
