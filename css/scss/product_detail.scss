@@ -174,13 +174,13 @@ main {
             margin-bottom: 24px;
             cursor: pointer;
             
-            
+            transition: all .5s;
+            &:hover{
+              transform: scale(1.1);
+            }
             .pic{
               @include rect(100%, 276px);
-              transition: all .5s;
-              &:hover{
-                transform: scale(1.1);
-              }
+             
               img{
                 @include square(100%);
               }
@@ -269,7 +269,7 @@ main {
     color:rgba(102,102,102,1);
     line-height:27px;
     padding: 16px;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 150px;
   }
 }
