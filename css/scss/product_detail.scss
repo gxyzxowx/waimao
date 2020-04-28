@@ -198,6 +198,11 @@ main {
                 font-family: "pingfang";
                 font-weight:500;
                 color:rgba(102,102,102,1);
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
               }
             }
           }
@@ -227,6 +232,7 @@ main {
 
 .product-details-pop{
   position: fixed;
+  z-index: 9;
   top:50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -263,11 +269,15 @@ main {
     color:rgba(102,102,102,1);
     line-height:27px;
     padding: 16px;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    overflow-y: scroll;
     height: 150px;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  body,html{
+    width: 100%;
+    overflow-x: hidden;
+    // background-color: red;
+  }
+ }
