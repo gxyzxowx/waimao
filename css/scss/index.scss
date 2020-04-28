@@ -6,9 +6,6 @@ src: url('../../font/azhu.ttf');
     //  url('Sansation_Bold.eot'); /* IE9+ */
 font-weight:bold;
 }
-
-
-
 body{
   .center{  //居中盒子
     margin: auto;
@@ -69,22 +66,30 @@ body{
  
   }
 
-@media screen and (min-width:768px) and (max-width:992px){
-  .carousel{
-    height: 400px;
-    width: 100%;
-   
-   
-  };   
 
-}
-@media screen and  (max-width:768px){
+@media screen and (min-width:480px) and (max-width:768px){
   .carousel{
     height: 300px;
     width: 100%;
-   
-   
+    .swiper-container-horizontal>.swiper-pagination-bullets{
+      bottom: 30px;
+    }
   };   
+}
+@media screen  and (max-width:480px){
+  // 轮播图
+  .carousel{
+    height: 300px;
+    width: 100%;
+    .swiper-container-horizontal>.swiper-pagination-bullets{
+      bottom: 20px;
+    }
+  };   
+
+
+
+  
+
 
 }
 
@@ -382,14 +387,110 @@ body{
      
 
  }
+ 
+ //四个小图板块
+   @media screen  and (max-width:480px){
+     
+    .section-box1{
+      width:100%;
+      height: 2100px;
+      margin: 0 auto;
+      background:rgba(255,255,255,1);
+      box-shadow:0px 0px 7px 0px rgba(0, 0, 0, 0.17);
+      text-align: center;
+      //  margin-top: -100px;
+      position: relative;
+      z-index: 1;
+     overflow: hidden;
+     padding-bottom: 100px;
+     h4{
+       font-size: 15px;
+     }
+     h3{
+       font: size 20px;
+     }
+     p{
+      font: size 20px;
+      width:90%;
+     margin-left: 5%;
+     overflow: visible;
+     }
+    
+      ul{
+        width:90%;
+        float: left;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-left: 5%;
+        margin-top: 30px;
+        height: 724px;
+       
+        li{
+         width:88%;
+         height:250px;
+         background:rgba(255,255,255,1);
+         border:1px solid rgba(225, 225, 225, 1);
+         box-shadow:0px 4px 13px 0px rgba(0, 0, 0, 0.12);
+         padding-bottom: 120px;
+         div{
+           overflow: hidden;
+         }
+         div:first-child{
+           div{
+             @include rect(96% ,100%);
+             margin-left: 2%;
+             img{
+               margin-top: 8px ;
+               transition: all 1s;
+               @include rect(100% ,100%);
+               margin: 0 auto;
+             }
+             img:hover{
+                 transform: scale(1.4);
+               
+               }
+  
+           }
+  
+         }
+         div:last-child{
+           margin-top: 5px;
+           span{
+             font-size:16px;
+             font-family:PingFang SC;
+             font-weight:500;
+             color:rgba(102,102,102,1);
+             display:inline-block;
+             width: 80%;
+             text-align: left;
+             line-height: 30px;
+           }
+           img{
+             vertical-align: middle;
+            float: right;
+            margin-right: 10px;
+            
+           }
+  
+         }
+        
+        }
+      }
+  
+   }
+
+   }        
+
     //视频宣传板块
     .section-box2{
     
-      width:1400px;
-      height: 704px;
+      width:80%;
+      overflow: hidden;
       margin: 0 auto;
       background:rgba(255,255,255,1);
       text-align: center;
+      padding-bottom: 50px;
       h4{
         padding-top: 60px;
         font-size:18px;
@@ -407,38 +508,38 @@ body{
        };
        p{
          text-indent: 1em;
-         width:1052px;
           height:78px;
          font-size:32px;
          margin-left: 170px;
          font-family:PingFang SC;
          font-weight:800;
          color:rgba(51,51,51,1);
+         width: 80%;
        };
      .video-box{
       display: flex;
       justify-content: center;
       flex-wrap:nowrap;
        margin: 0 auto;
-       height: 50px;
-      
+      overflow: hidden;
      
        .video-box1{
 
-          width: 600px;
+          width: 40%;
           height: 450px;
           background-image: url(/img/about-img.png);
           position: relative;
           float: left;
           img{
+            width: 22%;
             position: absolute;
-            top: 180px;
-            left: 230px;
+            top: 35%;
+            left: 40%;
           }
        }
         .video-box2{
           margin-left: 50px;
-        width:550px;
+        width:38%;
         height:357px;
         font-size:15px;
         font-family:Source Han Sans CN;
@@ -450,7 +551,121 @@ body{
         }
      }
     }
-     
+    // 视频宣传板块响应
+    @media screen and (min-width:480px) and (max-width:768px){
+      
+      .section-box2{
+        width:80%;
+        padding-bottom: 50px;
+        h4{
+          padding-top: 60px;
+          font-size:18px;
+        
+         };
+         h3{
+           font-size:36px;
+           font-family:Raleway;
+           font-weight:400;
+           color:rgba(51,51,51,1);
+           line-height:60px;
+         };
+         p{
+            height:auto;
+           margin-left: 0;
+           width: 100%;
+           padding-bottom: 20px;
+        
+         };
+       .video-box{
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+         margin: 0 auto;
+        overflow: hidden;
+       
+         .video-box1{
+  
+            width: 95%;
+            height: 300px;
+           
+            img{
+              width: 22%;
+              position: absolute;
+              top: 35%;
+              left: 40%;
+            }
+         }
+          .video-box2{
+            margin-left: 0px;
+            margin-top: 20px;
+          width:95%;
+          height:357px;
+       
+          }
+       }
+      }
+
+    } 
+
+// 视频宣传板块响应
+@media screen  and (max-width:480px){
+  .section-box2{
+    width:80%;
+    padding-bottom: 0px;
+    h4{
+      padding-top: 60px;
+      font-size:18px;
+    
+     };
+     h3{
+       font-size:36px;
+       font-family:Raleway;
+       font-weight:400;
+       color:rgba(51,51,51,1);
+       line-height:60px;
+     };
+     p{
+        height:auto;
+       margin-left: 0;
+       width: 100%;
+       padding-bottom: 20px;
+    
+     };
+   .video-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+     margin: 0 auto;
+    overflow: hidden;
+   
+     .video-box1{
+
+        width: 95%;
+        height: 250px;
+       
+        img{
+          width: 22%;
+          position: absolute;
+          top: 35%;
+          left: 40%;
+        }
+     }
+      .video-box2{
+       margin-left: 0px;
+       margin-top: 20px;
+      width:95%;
+      height:357px;
+      padding-bottom: 400px;
+      }
+   }
+  }
+
+} 
+
+
+
+
+
    //黑色背景图加五个小盒子板块
     .section-box3{
        @include rectBg(100%, 830px, '../../img/capabilrly-bg.png');
@@ -503,14 +718,13 @@ body{
               p.p-font{
                width: 80%;
                margin-left: 10%;
-               height: 107px;
                border:1px solid rgba(255,255,255,1);
                font-size:22px;
               font-family:PingFang SC;
               font-weight:500;
               color:rgba(255,255,255,1);
               text-align: center;       
-              padding-top: 10px;    
+              padding: 15px 0 15px 0;    
               margin-top: 40px;   
               overflow: hidden;
               }
@@ -596,6 +810,282 @@ body{
            
         }
       }
+
+ //黑色背景图加五个小盒子板块响应
+      @media screen and (min-width:480px) and (max-width:768px){
+        .section-box3{
+          @include rectBg(100%, 1600px, '../../img/capabilrly-bg.png');
+          text-align: center;
+          padding-top: 60px;
+           h4{
+             font-size:15px;
+           font-family:PingFang SC;
+           font-weight:bold;
+           text-decoration:underline;
+           color:rgba(255,141,71,1);
+           
+           }    
+           h3{
+             font-size:22px;
+           font-family:Raleway;
+           font-weight:400;
+           color:rgba(255,255,255,1);
+           line-height:60px;
+           }
+           h2{
+             font-size:25px;
+             font-family:PingFang SC;
+             font-weight:800;
+             color:rgba(255,255,255,1);
+             line-height:60px;
+           }
+           div.publicity{
+            width: 100%;
+            margin: 0px;
+               div:first-child{
+                 @include rect(100%,550px);
+                 float: left;
+                 margin-left: 0;
+                 text-align: center;
+                 background:rgba(57,81,143,1);
+                  h3{
+                   font-size:25px;
+                   line-height:50px;
+                  }
+                 .h3-1{
+                   margin-top: 40px;
+                 }
+                 p.p-font{
+                  width: 80%;
+                  margin-left: 10%;
+                  border:1px solid rgba(255,255,255,1);
+                  font-size:18px;
+                 font-family:PingFang SC;
+                 font-weight:500;
+                 color:rgba(255,255,255,1);
+                 text-align: center;       
+                 overflow: hidden;
+                 }
+                 .average-p{
+                   display: flex;
+                   justify-content: space-around;
+                   flex-wrap: nowrap;
+                   overflow: hidden;
+                   img{
+                     width: 80px;
+                     margin-top: 30px;
+                   }
+                 };
+                 .average-p1{
+                   font-size:15px;
+                   font-family:PingFang SC;
+                   font-weight:bold;
+                   color:rgba(255,255,255,1);
+                   margin-top: 10px;
+                 }
+   
+               }
+               div:last-child{
+                 @include rect(100%,overflow);
+                 float: left;
+                 margin-left: 0;
+                 ul{
+                   width: 100%;
+                    height: 730px;
+                  li{
+                   @include rect(49%,400px);
+                   background:rgba(255,255,255,1);
+                   box-shadow:0px 0px 7px 0px rgba(0, 0, 0, 0.17);
+                   float: left;
+                   text-align: left;
+                   overflow: hidden;
+                       h2{
+                         font-size:35px;
+                      
+                       }
+                       h3{
+                         font-size:18px;
+                         font-family:PingFang SC;
+                         font-weight:800;
+                         color:rgba(21,20,42,1);
+                         width: 90%;
+                         margin-left: 5%;
+                         position: relative;
+                         line-height: 40px;
+                       }
+                       h3:before {
+                         content: '';
+                         position: absolute;
+                         top: 40px;
+                         border-top: 3px solid rgba(57,81,143,1);
+                         width:40px;
+                         height:2px;
+         
+                       }
+                       p{
+                         font-size:15px;
+                         font-family:PingFang SC;
+                         font-weight:400;
+                         color:rgba(21,20,42,1);
+                         line-height:23px;
+                         width: 90%;
+                         margin-left: 5%;
+                       }
+   
+                  }
+                 li:nth-of-type(2),li:nth-of-type(4){
+                    margin-left: 1%;
+                  }
+                  li:nth-of-type(3),li:nth-of-type(4){
+                   margin-top: 1%;
+                 }
+   
+                 }
+               }
+              
+           }
+         }
+   
+
+      }
+      
+ //黑色背景图加五个小盒子板块响应
+ @media screen and  (max-width:480px){
+  .section-box3{
+    @include rectBg(100%, 1600px, '../../img/capabilrly-bg.png');
+    text-align: center;
+    padding-top: 60px;
+     h4{
+       font-size:15px;
+     font-family:PingFang SC;
+     font-weight:bold;
+     text-decoration:underline;
+     color:rgba(255,141,71,1);
+     
+     }    
+     h3{
+       font-size:22px;
+     font-family:Raleway;
+     font-weight:400;
+     color:rgba(255,255,255,1);
+     line-height:60px;
+     }
+     h2{
+       font-size:25px;
+       font-family:PingFang SC;
+       font-weight:800;
+       color:rgba(255,255,255,1);
+       line-height:60px;
+     }
+     div.publicity{
+      width: 100%;
+      margin: 0px;
+         div:first-child{
+           @include rect(100%,550px);
+           float: left;
+           margin-left: 0;
+           text-align: center;
+           background:rgba(57,81,143,1);
+            h3{
+             font-size:25px;
+             line-height:50px;
+            }
+           .h3-1{
+             margin-top: 40px;
+           }
+           p.p-font{
+            width: 80%;
+            margin-left: 10%;
+            border:1px solid rgba(255,255,255,1);
+            font-size:18px;
+           font-family:PingFang SC;
+           font-weight:500;
+           color:rgba(255,255,255,1);
+           text-align: center;       
+           overflow: hidden;
+           }
+           .average-p{
+             display: flex;
+             justify-content: space-around;
+             flex-wrap: nowrap;
+             overflow: hidden;
+             img{
+               width: 80px;
+               margin-top: 30px;
+             }
+           };
+           .average-p1{
+             font-size:15px;
+             font-family:PingFang SC;
+             font-weight:bold;
+             color:rgba(255,255,255,1);
+             margin-top: 10px;
+           }
+
+         }
+         div:last-child{
+           @include rect(100%,overflow);
+           float: left;
+           margin-left: 0;
+           ul{
+             width: 100%;
+              height: 730px;
+            li{
+             @include rect(100%,300px);
+             background:rgba(255,255,255,1);
+             box-shadow:0px 0px 7px 0px rgba(0, 0, 0, 0.17);
+             float: left;
+             text-align: left;
+             overflow: hidden;
+                 h2{
+                   font-size:35px;
+                
+                 }
+                 h3{
+                   font-size:18px;
+                   font-family:PingFang SC;
+                   font-weight:800;
+                   color:rgba(21,20,42,1);
+                   width: 90%;
+                   margin-left: 5%;
+                   position: relative;
+                   line-height: 40px;
+                 }
+                 h3:before {
+                   content: '';
+                   position: absolute;
+                   top: 40px;
+                   border-top: 3px solid rgba(57,81,143,1);
+                   width:40px;
+                   height:2px;
+   
+                 }
+                 p{
+                   font-size:15px;
+                   font-family:PingFang SC;
+                   font-weight:400;
+                   color:rgba(21,20,42,1);
+                   line-height:23px;
+                   width: 90%;
+                   margin-left: 5%;
+                 }
+
+            }
+           li:nth-of-type(2),li:nth-of-type(4){
+              margin-left: 0;
+            }
+            li:nth-of-type(3),li:nth-of-type(4){
+             margin-top: 0;
+           }
+
+           }
+         }
+        
+     }
+   }
+
+
+}
       //荣誉证书板块
       .setion-box4{
         @include rectBg(100%,862px,"/img/certificate-bg.png");
@@ -649,6 +1139,119 @@ body{
             }
          }
       }
+
+        // 荣誉证书板块
+      @media screen and (min-width:480px) and (max-width:768px){
+        .setion-box4{
+          @include rectBg(100%,1050px,"/img/certificate-bg.png");
+          overflow: hidden;
+          text-align: center;
+          
+           h4{
+            font-size:18px;
+            font-family:PingFang SC;
+            font-weight:bold;
+            text-decoration:underline;
+            color:rgba(57,81,143,1);
+            margin-top: 80px;
+           }
+           h3{
+            font-size:35px;
+            font-family:Raleway;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height:60px;
+         
+           }
+           h2{
+            font-size:35px;
+            font-family:PingFang SC;
+            font-weight:800;
+            color:rgba(51,51,51,1);
+            line-height:50px;
+           
+           }
+           .honor{
+              flex-wrap: wrap;
+              @include rect(100%,300px);
+              margin-top: 0px;
+               margin-left: 0;
+               div{
+                 width: 80%;
+                 height: 100%;
+                 font-size: 0;
+                 margin-top: 50px;
+                 img{
+                  @include rect(100%,100%);
+                  vertical-align: middle;
+                 }
+               }
+              .honor2{
+                margin-left: 2%;
+                
+              }
+           }
+        }
+         
+
+      }
+      
+        // 荣誉证书板块
+        @media screen  and (max-width:480px){
+          .setion-box4{
+            @include rectBg(100%,1050px,"/img/certificate-bg.png");
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 50px;
+             h4{
+              font-size:18px;
+              font-family:PingFang SC;
+              font-weight:bold;
+              text-decoration:underline;
+              color:rgba(57,81,143,1);
+              margin-top: 80px;
+             }
+             h3{
+              font-size:35px;
+              font-family:Raleway;
+              font-weight:400;
+              color:rgba(51,51,51,1);
+              line-height:60px;
+           
+             }
+             h2{
+              font-size:35px;
+              font-family:PingFang SC;
+              font-weight:800;
+              color:rgba(51,51,51,1);
+              line-height:50px;
+             
+             }
+             .honor{
+                flex-wrap: wrap;
+                @include rect(100%,300px);
+                margin-top: 0px;
+                 margin-left: 0;
+                 div{
+                   width: 80%;
+                   height: 100%;
+                   font-size: 0;
+                   margin-top: 50px;
+                   img{
+                    @include rect(100%,100%);
+                    vertical-align: middle;
+                   }
+                 }
+                .honor2{
+                  margin-left: 2%;
+                  
+                }
+             }
+          }
+           
+  
+        }
+
    //展现优势板块
       .setion-5{
         @include rectBg(100%,888px,"/img/advantage-bg.png");
@@ -721,12 +1324,156 @@ body{
            
           
       }
+      // 展现优势板块
+      @media screen and (min-width:480px) and (max-width:768px){
+        .setion-5{
+          @include rectBg(100%,550px,"/img/advantage-bg.png");
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            background-size: 100% 100%; 
+              h4{
+                font-size:18px;
+                font-family:PingFang SC;
+                font-weight:bold;
+                text-decoration:underline;
+                color:rgba(57,81,143,1);
+                margin-top: 50px;
+              }
+              h4:before {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: #99d2fc;
+               }
+              h3{
+                font-size:35px;
+                font-family:Raleway;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                line-height:50px;
+              }
+              h2{
+                font-size:35px;
+                font-family:PingFang SC;
+                font-weight:800;
+                color:rgba(51,51,51,1);
+                line-height:50px;
+              }
+              div{
+                @include  rectBg(100%, 130px, "/img/advantage.png");
+                
+                margin-top: 20px;
+             
+              }
+             
+                span{
+                  position: absolute;
+                   width: 50px;
+                   height: 50px;
+                   background:rgba(57,81,143,1);
+                   border-radius:50%;
+                   bottom: 30px;
+                   right: 10px;
+                   line-height: 80px;
+                   a{
+                    width: 50px;
+                    height: 50px;
+                    display:inline-block;
+                    position: relative;
+                    z-index: 1;
+                   }
+                   img{
+                     text-align: center;
+                     display: inline-block;
+                     width: 38px;
+                     height: 38px;
+                   }
+                }
+        }
+      }
 
+// 展现优势板块
+@media screen  and (max-width:480px){
+  .setion-5{
+    @include rectBg(100%,500px,"/img/advantage-bg.png");
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+      background-size: 100% 100%; 
+      padding-bottom: 100px;
+        h4{
+          font-size:18px;
+          font-family:PingFang SC;
+          font-weight:bold;
+          text-decoration:underline;
+          color:rgba(57,81,143,1);
+          margin-top: 50px;
+        }
+        h4:before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: #99d2fc;
+         }
+        h3{
+          font-size:35px;
+          font-family:Raleway;
+          font-weight:400;
+          color:rgba(51,51,51,1);
+          line-height:50px;
+        }
+        h2{
+          font-size:35px;
+          font-family:PingFang SC;
+          font-weight:800;
+          color:rgba(51,51,51,1);
+          line-height:50px;
+        }
+        div{
+          @include  rectBg(100%, 100px, "/img/advantage.png");
+          
+          margin-top: 20px;
+       
+        }
+       
+          span{
+            position: absolute;
+             width: 50px;
+             height: 50px;
+             background:rgba(57,81,143,1);
+             border-radius:50%;
+             bottom: 30px;
+             right: 10px;
+             line-height: 80px;
+             a{
+              width: 50px;
+              height: 50px;
+              display:inline-block;
+              position: relative;
+              z-index: 1;
+             }
+             img{
+               text-align: center;
+               display: inline-block;
+               width: 38px;
+               height: 38px;
+             }
+          }
+      
+
+  }
+}
 
    }
-  
-
-
 
 }
 

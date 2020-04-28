@@ -4,13 +4,21 @@
         var detainment=this.document.querySelector(".detainment");
         var detainment1=this.document.querySelector(".detainment-1");
         var detainment2=this.document.querySelector(".detainment-2");
-        var bye=this.document.querySelector(".bye");
+        var bye=this.document.querySelectorAll(".bye");
 
    //邮箱点击事件
    function openEmailStay (){    
         mailbox.onclick=function(){
          detainment.style.display="block";
         }
+     }
+     
+   // 邮箱移入事件
+     function closeEmailStay(){
+      detainment1.onmouseover=function(){
+         detainment1.style.display="block";
+         detainment2.style.display="none";
+       }
      }
 
      //邮箱移除弹出挽留
@@ -20,17 +28,22 @@
        detainment1.style.display="none";
      }
    }
+   
+  
     //关闭邮箱
    function closeInquiry(){
-    bye.onclick=function(){
-      detainment.style.display="none"
-    }
-     
+     for(var i=0; i<bye.length; i++){
+      bye[i].onclick=function(){
+        detainment.style.display="none"
+      }
+       
+     }
+   
    }
    openEmailStay()
    openInquiry()
    closeInquiry()
-   
+   closeEmailStay()
  
 // index页面回到顶部
 
