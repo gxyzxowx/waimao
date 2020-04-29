@@ -770,12 +770,13 @@ footer.footer{
         font-size: 16px;
         margin-top: 70px;
         margin-left: 25%;
+       
         h4 {
           font-size: 26px;
-          padding-left: 10%;
+          padding-left: 5%;
           span:before {
             bottom: -5px;
-            left: 10%;
+            left: 5%;
             width: 70px;
             height: 4px;
             cursor: pointer;
@@ -784,7 +785,7 @@ footer.footer{
        
         p {
           line-height: 40px;
-          padding-left: 10%;
+          padding-left: 5%;
           .footer-p-span-glide {
             width: 25px;
             height: 2px;
