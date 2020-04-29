@@ -10,6 +10,7 @@
    function openEmailStay (){    
         mailbox.onclick=function(){
          detainment.style.display="block";
+        
         }
      }
      
@@ -18,15 +19,18 @@
       detainment1.onmouseover=function(){
          detainment1.style.display="block";
          detainment2.style.display="none";
+         
        }
      }
-
+    
      //邮箱移除弹出挽留
    function openInquiry(){
-    detainment1.onmouseout=function(){
+    detainment.onmouseout=function(){
        detainment2.style.display="block";
        detainment1.style.display="none";
+      
      }
+    
    }
    
   
@@ -36,14 +40,15 @@
       bye[i].onclick=function(){
         detainment.style.display="none"
       }
-       
      }
    
    }
-   openEmailStay()
-   openInquiry()
-   closeInquiry()
+    openInquiry()
    closeEmailStay()
+   closeInquiry()
+   openEmailStay()
+   
+   
  
 // index页面回到顶部
 
