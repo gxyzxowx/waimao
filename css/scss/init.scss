@@ -590,6 +590,102 @@ nav.com-nav {
       }
   }
 }
+// input @media
+@media screen and (max-width:480px){
+  .com-inquiry{
+    background-image: url(/img/contact_us_bg.png);
+    background-position: center center;
+    // height: 656px;
+    width: 100%;
+    padding-top: 28px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    .title{
+        font-size:28px;
+        font-family:PingFang SC;
+        font-weight:bold;
+        color:rgba(27,28,56,1);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .input-wrap{
+        max-width: 90%;
+        min-width: 90%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        .input-flex{
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .input:nth-of-type(4){
+          display: none;
+        }
+        .input{
+            height: 60px;
+            line-height: 40px;
+            // float: left;
+            margin: 0px 0 10px 0;
+            text-align: right;
+            width: 100%;
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+            .name{
+                width: 100px;
+                text-align: right;
+                
+            }
+            input{
+                background: none;
+                height: 40px;
+                // width: 200px;
+                flex: 1;
+                margin-left: 10px;
+                border:2px solid rgba(102,102,102,1);
+                padding-left: 11px;
+                box-sizing: border-box;
+            }
+            input:focus{
+                outline:none;
+                border:2px solid rgba(255,152,6,1);
+            }
+        }
+        .max-ipt{
+            max-width: 100%;
+            min-width: 100%;
+            margin-top: 20px;
+            float: right;
+            input{
+                width: 100%;
+                margin-left: 0;
+            } 
+        }
+        .send{
+            width: 100%;
+            height: 60px;
+            float: right;
+            margin-top: 24px;
+            // input{
+            //     width: 100%;
+            //     height: 100%;
+            //     font-size:18px;
+            //     font-family:PingFang SC;
+            //     font-weight:bold;
+            //     background:rgba(255,152,6,1);
+            //     color:rgba(255,255,255,1);
+            //     border: none;
+            //     outline:none;
+            //     cursor: pointer;
+            // }
+        }
+    }
+  }
+}
+
+
 
 
 //底部版块
