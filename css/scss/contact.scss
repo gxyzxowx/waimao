@@ -129,6 +129,7 @@ body{
                         display: inline-block;
                         .input{
                             float: left;
+                            display: flex;
                         }
                         input{
                             width:418px;
@@ -145,7 +146,7 @@ body{
                         }
                         .icon{
                             float: left;
-                            margin-top: 3px;
+                            margin-top: 0px;
                             margin-left: 20px;
                             width: 54px;
                             height: 58px;
@@ -266,7 +267,8 @@ body{
                             .left{
                                 // border-right: 1px solid #dddddd;
                                 border: none;
-                                margin-bottom: 20px;
+                                height: auto;
+                                // margin-bottom: 20px;
                                 .phone, .address{
                                     width: 100%;
                                     margin: 0 auto;
@@ -274,6 +276,7 @@ body{
                                 }
                             }
                             .right{
+                                height: auto;
                                 .email, .working{
                                     width: 100%;
                                     margin: 0 auto;
@@ -307,16 +310,17 @@ body{
                             display: flex;
                             justify-content: center;
                             box-sizing: border-box;
-                            // .input{
-                            // }
+                            .input{
+                                width: 86%;
+                                display: flex;
+                            }
                             input{
-                                width:66%;
                                 height:30px;
                                 margin: 0;
                                 border:2px solid rgba(204,204,204,1);
-                                padding-left: 10px;
+                                padding-left: 5px;
                                 box-sizing: border-box;
-                                margin-left: 20px;
+                                margin-left: 5px;
                                 flex: 1;
                             }
                             input:focus{
@@ -325,7 +329,7 @@ body{
                             }
                             .icon{
                                 float: left;
-                                margin-top: 1px;
+                                margin-top: 0px;
                                 // margin-left: 20px;
                                 margin-left: 0;
                                 width: 30px;
