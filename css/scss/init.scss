@@ -186,6 +186,10 @@ li {
   
 
 //头部导航栏
+.empty{
+  height: 120px;
+  width: 100%;
+}
 nav.com-nav {
   width: 100%;
   height: 120px;
@@ -195,6 +199,7 @@ nav.com-nav {
   position: fixed;
   z-index: 9;
   box-shadow:0px 0px 4px 0px rgba(0, 0, 0, 0.48);
+  
   .nav-hide{
     width: 100%;
     height: 55px;
@@ -270,6 +275,7 @@ nav.com-nav {
 
   }
 }
+//头部导航栏响应
 @media screen and (min-width:1300px) and (max-width:1500px){
   nav.com-nav {
     .nav-box2-ul{
@@ -284,6 +290,7 @@ nav.com-nav {
   }
 }
 }
+//头部导航栏响应
 @media screen and (min-width:1200px) and (max-width:1350px){
   nav.com-nav {
     .nav-box2 {
@@ -298,8 +305,8 @@ nav.com-nav {
   }
 }
 }
+//头部导航栏响应
 @media screen and (min-width:992px) and (max-width:1200px){
-  //头部导航栏媒体查询
 nav.com-nav {
   width: 100%;
   height: 120px;
@@ -350,7 +357,7 @@ nav.com-nav {
 
 
 }
-
+//头部导航栏响应
 @media screen and (min-width:992px) and (max-width:1100px){
   nav.com-nav {
     .nav-box1 {
@@ -378,8 +385,11 @@ nav.com-nav {
   }
 }
 }
-
+//头部导航栏响应
 @media screen and (min-width:600px) and (max-width:992px){
+  .empty{
+    height: 70px;
+  }
   nav.com-nav {
     height: 70px;
     .nav-box1 {
@@ -415,14 +425,18 @@ nav.com-nav {
 }
 
 }
+//头部导航栏响应
 @media screen and  (max-width:600px) {
+  .empty{
+    height: 70px;
+  }
   nav.com-nav {
-  
+    height: 70px;
     .nav-box1 {
       height: 70px;
       width: 30%;
       height: 70px;
-      display: none;
+     
       img {
         width: 50px;
         height: 20px;
@@ -452,56 +466,6 @@ nav.com-nav {
   }
 }
 }
-@media screen and (max-width:480px) {
-  nav.com-nav {
-     height: 120px;
-    .nav-hide{
-      display: block;
-      text-align: center;
-    }
-    .nav-box1 {
-      height: 70px;
-      width: 30%;
-      height: 70px;
-      display: none;
-     
-      img {
-        width: 50px;
-        height: 20px;
-        top: 20px;
-        right: 20px;
-      
-     
-      }
-    }
-  
-    .nav-box2 {
-      float: left;
-      height: 70px;
-      width: 100%;
-      
-      .nav-box2-ul{
-       display: flex;
-       flex-wrap: nowrap;
-       justify-content: space-around;
-       height: 100%;
-        overflow-x: hidden;
-      li{
-        line-height: 70px;
-        a{
-          font-size: 10px;
-        }
-        .a-default:after {
-          bottom: 30%;
-          left: 0;
-        }
-      }
-    }
-  }
-}
-}
-
-
 
 
 // input
@@ -590,6 +554,106 @@ nav.com-nav {
       }
   }
 }
+// input @media
+@media screen and (max-width:480px){
+  .com-inquiry{
+    background-image: url(/img/contact_us_bg.png);
+    background-position: center center;
+    // height: 656px;
+    width: 100%;
+    padding-top: 28px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    .title{
+        font-size:28px;
+        font-family:PingFang SC;
+        font-weight:bold;
+        color:rgba(27,28,56,1);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .input-wrap{
+        max-width: 90%;
+        min-width: 90%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        .input-flex{
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .input:nth-of-type(4){
+          display: none;
+        }
+        .input{
+            height: 60px;
+            line-height: 40px;
+            // float: left;
+            margin: 0px 0 10px 0;
+            text-align: right;
+            width: 100%;
+            display: flex;
+            display: -webkit-flex;
+            justify-content: space-between;
+            .name{
+                width: 100px;
+                text-align: right;
+                
+            }
+            input{
+                background: none;
+                height: 40px;
+                // width: 200px;
+                flex: 1;
+                margin-left: 10px;
+                border:2px solid rgba(102,102,102,1);
+                padding-left: 11px;
+                box-sizing: border-box;
+            }
+            input:focus{
+                outline:none;
+                border:2px solid rgba(255,152,6,1);
+            }
+        }
+        .max-ipt{
+            max-width: 100%;
+            min-width: 100%;
+            margin-top: 20px;
+            float: right;
+            input{
+                width: 100%;
+                margin-left: 0;
+            } 
+        }
+        .send{
+            width: 100%;
+            height: 60px;
+            float: right;
+            margin-top: 24px;
+            // input{
+            //     width: 100%;
+            //     height: 100%;
+            //     font-size:18px;
+            //     font-family:PingFang SC;
+            //     font-weight:bold;
+            //     background:rgba(255,152,6,1);
+            //     color:rgba(255,255,255,1);
+            //     border: none;
+            //     outline:none;
+            //     cursor: pointer;
+            // }
+        }
+    }
+  }
+}
+
+
+
+
+
+
 
 
 //底部版块
@@ -672,7 +736,7 @@ footer.footer{
   }
  
   .p-icon {
-    font-size:16px;
+    font-size:14px;
     font-family:Arial;
     font-weight:400;
     color:rgba(255,255,255,1);
@@ -685,7 +749,7 @@ footer.footer{
     img {
       vertical-align: middle;
       margin-left: 10px;
-         
+      width: 40px;
     }
   }
 
@@ -706,8 +770,9 @@ footer.footer{
     cursor: pointer;
   }
 }
-// 底部响应
+
 @media screen and (min-width:480px) and (max-width:768px){
+  // 底部响应
   footer.footer{
     @include rect(100%,450px);
     ul{
@@ -783,10 +848,104 @@ footer.footer{
     }
   }
 
+    
+// input
+.com-inquiry{
+  background-image: url(/img/contact_us_bg.png);
+  background-position: center center;
+  height: 595px;
+  width: 100%;
+  padding-top: 48px;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  .title{
+      font-size:22px;
+      font-family:PingFang SC;
+      font-weight:bold;
+      color:rgba(27,28,56,1);
+      text-align: center;
+      padding-bottom: 20px;
+  }
+  .input-wrap{
+      max-width: 100%;
+      min-width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      .input-flex{
+          display: flex;
+          display: -webkit-flex;
+          justify-content: space-between;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
+      .input{
+          height: 30px;
+          line-height: 30px;
+          // float: left;
+          margin: 10px 0 10px 0;
+          text-align: right;
+          width: 600px;
+          display: flex;
+          display: -webkit-flex;
+          justify-content: space-around;
+          .name{
+              width:30%;
+              text-align: left;
+          }
+          input{
+              background: none;
+              height: 30px;
+              width: 50%;
+              margin-left: 10px;
+              border:2px solid rgba(102,102,102,1);
+              padding-left: 11px;
+              box-sizing: border-box;
+          }
+          input:focus{
+              outline:none;
+              border:2px solid rgba(255,152,6,1);
+          }
+      }
+      .max-ipt{
+          max-width: 90%;
+          min-width: 90%;
+          margin-top: 40px;
+          float: none;
+          margin-left: 5%;
+          input{
+              width: 100%;
+              margin-left: 0;
+              font-size: 5px;
+          } 
+      }
+      .send{
+          width:100%;
+          height: 60px;
+          float: right;
+          margin-top: 24px;
+          input{
+              width: 100%;
+              height: 100%;
+              font-size:18px;
+              font-family:PingFang SC;
+              font-weight:bold;
+              background:rgba(255,152,6,1);
+              color:rgba(255,255,255,1);
+              border: none;
+              outline:none;
+              cursor: pointer;
+          }
+      }
+  }
 }
 
-// 底部响应
+  
+
+}
+
+
 @media screen and (max-width:480px){
+  // 底部响应
   footer.footer{
     @include rect(100%,650px);
     ul{
@@ -800,12 +959,13 @@ footer.footer{
         font-size: 16px;
         margin-top: 70px;
         margin-left: 25%;
+       
         h4 {
           font-size: 26px;
-          padding-left: 10%;
+          padding-left: 5%;
           span:before {
             bottom: -5px;
-            left: 10%;
+            left: 5%;
             width: 70px;
             height: 4px;
             cursor: pointer;
@@ -814,7 +974,7 @@ footer.footer{
        
         p {
           line-height: 40px;
-          padding-left: 10%;
+          padding-left: 5%;
           .footer-p-span-glide {
             width: 25px;
             height: 2px;
@@ -869,6 +1029,147 @@ footer.footer{
      
     }
   }
+ //头部响应
+  nav.com-nav {
+    height: 120px;
+   .nav-hide{
+     display: block;
+     text-align: center;
+   }
+   .nav-box1 {
+     height: 70px;
+     width: 30%;
+     height: 70px;
+     display: none;
+    
+     img {
+       width: 50px;
+       height: 20px;
+       top: 20px;
+       right: 20px;
+     
+    
+     }
+   }
+ 
+   .nav-box2 {
+     float: left;
+     height: 70px;
+     width: 100%;
+     
+     .nav-box2-ul{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      height: 100%;
+       overflow-x: hidden;
+     li{
+       line-height: 70px;
+       a{
+         font-size: 10px;
+       }
+       .a-default:after {
+         bottom: 30%;
+         left: 0;
+       }
+     }
+   }
+ }
+}
+
+
+// input
+.com-inquiry{
+  background-image: url(/img/contact_us_bg.png);
+  background-position: center center;
+  height: 595px;
+  width: 100%;
+  padding-top: 48px;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  .title{
+      font-size:22px;
+      font-family:PingFang SC;
+      font-weight:bold;
+      color:rgba(27,28,56,1);
+      text-align: center;
+      padding-bottom: 20px;
+  }
+  .input-wrap{
+      max-width: 100%;
+      min-width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      .input-flex{
+          display: flex;
+          display: -webkit-flex;
+          justify-content: space-between;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
+      .input{
+          height: 30px;
+          line-height: 30px;
+          // float: left;
+          margin: 10px 0 10px 0;
+          text-align: right;
+          width: 600px;
+          display: flex;
+          display: -webkit-flex;
+          justify-content: space-around;
+          .name{
+              width:30%;
+              text-align: left;
+          }
+          input{
+              background: none;
+              height: 30px;
+              width: 50%;
+              margin-left: 10px;
+              border:2px solid rgba(102,102,102,1);
+              padding-left: 11px;
+              box-sizing: border-box;
+          }
+          input:focus{
+              outline:none;
+              border:2px solid rgba(255,152,6,1);
+          }
+      }
+      .max-ipt{
+          max-width: 90%;
+          min-width: 90%;
+          margin-top: 40px;
+          float: none;
+          margin-left: 5%;
+          input{
+              width: 100%;
+              margin-left: 0;
+              font-size: 5px;
+          } 
+      }
+      .send{
+          width:100%;
+          height: 60px;
+          float: right;
+          margin-top: 24px;
+          input{
+              width: 100%;
+              height: 100%;
+              font-size:18px;
+              font-family:PingFang SC;
+              font-weight:bold;
+              background:rgba(255,152,6,1);
+              color:rgba(255,255,255,1);
+              border: none;
+              outline:none;
+              cursor: pointer;
+          }
+      }
+  }
+}
+
+
+
 
 }
 
@@ -1111,7 +1412,7 @@ footer.footer{
                  .name{
                      width: 40%;
                      height: 20px;
-                     font-size: 14px;
+                     font-size: 12px;
                      vertical-align: middle;
                      padding: 0;
                      line-height: 20px;
