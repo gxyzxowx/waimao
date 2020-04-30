@@ -92,8 +92,10 @@ body{
     body{
         min-width: 100%;
         .center-wrap{
+            padding-top: 60px;
             .box{
-                margin: 60px auto;
+                // padding-top: 30px;
+                margin: 0px auto 60px auto;
                 min-width: 90%;
                 max-width: 90%;
                 background:rgba(255,255,255,1);
