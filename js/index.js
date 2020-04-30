@@ -23,7 +23,6 @@ window.onload=function(){
 // index页面回到顶部
  var  btnn=document.querySelector(".dingbu");
  var screenTop=null, te=null; 
-
  window.onscroll = function(){
    screenTop = document.documentElement.scrollTop;
    if(screenTop>0 ){
