@@ -116,7 +116,9 @@ p {
 li {
   list-style: none;
 }
-
+.hidden{
+  display: none;
+}
 //定位发送邮箱
 .email-us {
   position: fixed;
@@ -1086,7 +1088,6 @@ footer.footer{
       left: 0;
       top: 0;
       z-index: 99;
-      display: none;
    
       .detainment-1{  //第一个弹出的内容
         background-image: url(/img/contact_us_bg.png);
@@ -1270,7 +1271,6 @@ footer.footer{
        left: 0;
        top: 0;
        z-index: 99;
-       display: none;
     
        .detainment-1{  //第一个弹出的内容
          background-image: url(/img/contact_us_bg.png);
@@ -1372,7 +1372,6 @@ footer.footer{
  
  
      .detainment-2{  //第二次弹出的内容
-       display: none;
        position: absolute;
        z-index: 999;
        opacity: 1;
@@ -1475,7 +1474,6 @@ footer.footer{
   @media screen and (min-width:768px) and (max-width:1200px){
     .detainment{
   .detainment-2{  //第二次弹出的内容
-    display: none;
     position: absolute;
     z-index: 999;
     opacity: 1;
