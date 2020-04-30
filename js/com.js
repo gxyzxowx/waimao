@@ -50,9 +50,6 @@ function clicklinav (){
    }
 
 }
-
-
-
   window.addEventListener("load",function(){
        
          mailbox =document.querySelector(".email-us");
