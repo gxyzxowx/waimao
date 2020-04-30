@@ -1,18 +1,18 @@
+/*
+ * @Date         : 2020-04-28 10:09:57
+ * @LastEditors  : 曾迪
+ * @LastEditTime : 2020-04-30 15:33:41
+ * @FilePath     : \03waimao\js\com.js
+ */
 
- var mailbox,detainment,detainment1,detainment2,bye;
+ var pop1,pop2;
  var clickli,clicklia;
-//点击邮箱弹出Inquiry
-function openEmailStay (){    
-  mailbox.onclick=function(){
-   detainment.style.display="block";
-  
-  }
-}
+
 //点击关闭按钮关闭Inquiry
 function closeInquiry(){
     
      bye1.onclick=function(){
-      detainment.style.display="none";
+      pop.style.display="none";
      }
   
 }
@@ -37,17 +37,8 @@ function clicklinav (){
   window.addEventListener("load",function(){
        
          mailbox =document.querySelector(".email-us");
-         detainment=document.querySelector(".detainment");
-         detainment1=document.querySelector(".detainment-1");
-         detainment2=document.querySelector(".detainment-2");
-         bye1=document.querySelector(".bye1");
-         console.log(bye1)
-         openEmailStay()
-         closeInquiry()
-          // openInquiry()
-        // closeEmailStay()
-     
-     
+         pop1=document.querySelector("#pop1");
+         pop2=document.querySelector("#pop2");
 
 //导航栏伪类的切换
     clickli=document.querySelectorAll("nav.com-nav .nav-box2 .nav-box2-ul li");
@@ -57,3 +48,24 @@ function clicklinav (){
 
      
     }, false);
+
+
+
+
+
+    var closeStay = function(){
+      hide(pop2)
+    }
+    var closeInput = function(){
+      hide(pop1)
+    }
+    var openInput = function(){
+      show(pop1)
+    }
+ 
+    var hide = function(e){
+      e.classList.add('hidden')
+    }
+    var show = function(e){
+      e.classList.remove('hidden')
+    }
