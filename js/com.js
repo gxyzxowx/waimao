@@ -1,7 +1,7 @@
 /*
  * @Date         : 2020-04-28 10:09:57
  * @LastEditors  : 曾迪
- * @LastEditTime : 2020-04-30 15:33:41
+ * @LastEditTime : 2020-04-30 16:46:15
  * @FilePath     : \03waimao\js\com.js
  */
 
@@ -45,12 +45,25 @@ function clicklinav (){
      clicklia=document.querySelectorAll("nav.com-nav .nav-box2 .nav-box2-ul li a ");
   clicklinav ()
 
-
+  // 监听鼠标事件
+  addEvent()
      
     }, false);
 
 
-
+function addEvent() {
+  document.onmousemove = function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    if(pop2.classList.contains('hidden')){
+      if (x >= document.body.offsetWidth-2 || x<= 2 ||y <=6 || y>=document.body.offsetHeight-2){
+        // console.log(y)
+        openStay(pop2)
+      }
+    }
+    
+  }
+}
 
 
     var closeStay = function(){
@@ -62,7 +75,9 @@ function clicklinav (){
     var openInput = function(){
       show(pop1)
     }
- 
+    var openStay = function(){
+      show(pop2)
+    }
     var hide = function(e){
       e.classList.add('hidden')
     }

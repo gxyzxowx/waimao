@@ -116,8 +116,15 @@ p {
 li {
   list-style: none;
 }
+// 隐藏
 .hidden{
   display: none;
+}
+// 富文本样式
+.com-context{
+  img{
+    max-width: 100%;
+  }
 }
 //定位发送邮箱
 .email-us {
@@ -1186,7 +1193,6 @@ footer.footer{
 
 
     .detainment-2{  //第二次弹出的内容
-      display: none;
       position: absolute;
       z-index: 999;
       opacity: 1;

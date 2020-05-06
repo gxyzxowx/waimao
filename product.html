@@ -105,16 +105,70 @@
       <h5>Copyright © 2020 by **********| All rights reserved</h5>
   
   </footer>
-    <!-- 邮件 -->
-    <div class="email-us">
-      <a href="javascript:;" >
-        <img src="/img/email.png">
-        <span>Email Us</span>
-      </a>
+  <!-- 每个页面共用开始 -->
+  <!-- Inquiry Now -->
+  <div class="detainment hidden" id="pop1">
+    <div class="detainment-1">
+      <img class="bye1" src="/img/close.png" onclick="closeInput()">
+      <div class="title">Inquiry Now</div>
+      <div class="input-wrap">
+        <div class="input-flex">
+          <div class="input">
+            <div class="name">*Name:</div><input type="text" placeholder="Your name">
+          </div>
+          <div class="input">
+            <div class="name">Company:</div><input type="text">
+          </div>
+          <div class="input">
+            <div class="name">*Email:</div><input type="text">
+          </div>
+          <div class="input"></div>
+          <div class="input">
+            <div class="name">Tell:</div><input type="text">
+          </div>
+          <div class="input">
+            <div class="name">Whatsapp:</div><input type="text">
+          </div>
+        </div>
+        <div class="max-ipt input">
+          <input type="text" placeholder="*Tell us your special needs as detailed as possible">
+        </div>
+        <div class="send">
+          <input type="submit" value="send">
+        </div>
+      </div>
     </div>
-    <!-- 回到顶部 -->
-    <div class="scroll-top">
-      
+
+  </div>
+  <!-- 挽留框 -->
+  <div class="detainment hidden" id="pop2">
+    <div class="detainment-2">
+      <div class="title">Get “10 traps to buy a liquid nitrogen tank” for free
+        <img class="bye2" src="/img/close.png" onclick="closeStay()">
+      </div>
+      <div class="email">
+        <div class="input">*Email:<input type="text" placeholder="Your Email（Format must have@）"></div>
+        <div class="icon"></div>
+      </div>
+      <div class="send">
+        <input type="submit" value="SEND">
+      </div>
     </div>
+  </div>
+
+
+  <!-- 邮箱板块 -->
+  <div class="email-us" onclick="openInput()">
+    <a href="javascript:;">
+      <img src="./img/email.png">
+      <span>Email Us</span>
+    </a>
+  </div>
+  <!-- 回到顶部 -->
+  <div class="scroll-top">
+
+  </div>
+  <!-- 每个页面共用结束 -->
 </body>
 </html>
+<script src="./js/com.js"></script>

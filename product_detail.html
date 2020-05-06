@@ -1,7 +1,7 @@
 <!--
  * @Date         : 2020-04-24 16:19:24
  * @LastEditors  : 曾迪
- * @LastEditTime : 2020-04-30 14:25:07
+ * @LastEditTime : 2020-04-30 17:37:33
  * @FilePath     : \03waimao\product_detail.html
  -->
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <div id="wrap" onmouseout="outPage()">
+  <div id="wrap">
     <nav class="com-nav">
       <div class="nav-hide">
         <img src="img/logo.png"/>
@@ -71,13 +71,13 @@
           </div>
           <div class="bottom">
             <div class="line"></div>
-            <a class="btn" href="#main1">Button</a>
+            <a class="btn" onclick="openInput()">Button</a>
           </div>
         </div>
       </div>
 
 
-      <!-- 产品详情 -->
+      <!-- 产品详情点开单个 -->
   <div class="product-details-pop" v-if="currentProductIndex!= -1">
     <div class="title">
       <span>{{productslist[currentProductIndex].title}}</span>
@@ -87,7 +87,7 @@
       
       <img :src="productslist[currentProductIndex].img" alt="">
     </div>
-    <div class="desc">{{productslist[currentProductIndex].desc}}
+    <div class="desc com-context">{{productslist[currentProductIndex].desc}}
   </div>
   </div>
 
@@ -127,18 +127,8 @@
               <span>{{navlist[1].name}}</span>
               <div class="icon" :class="{active: navlist[1].ifshow}"></div>
             </div>
-            <div class="main-content" v-show="navlist[1].ifshow">
+            <div class="main-content com-context" v-show="navlist[1].ifshow">
               果然是郭德纲第三个
-              <!-- <table>
-                <tr>
-                  <th>name</th>
-                  <th>value</th>
-                </tr>
-                <tr>
-                  <td>abc-name</td>
-                  <td>abc-value</td>
-                </tr>
-              </table> -->
             </div>
 
           </div>
@@ -148,7 +138,7 @@
               <span>{{navlist[2].name}}</span>
               <div class="icon" :class="{active: navlist[2].ifshow}"></div>
             </div>
-            <div class="main-content" v-show="navlist[2].ifshow">
+            <div class="main-content com-context" v-show="navlist[2].ifshow">
               sfasfa
             </div>
           </div>
@@ -158,7 +148,7 @@
               <span>{{navlist[3].name}}</span>
               <div class="icon" :class="{active: navlist[3].ifshow}"></div>
             </div>
-            <div class="main-content" v-show="navlist[3].ifshow">
+            <div class="main-content com-context" v-show="navlist[3].ifshow">
               asfasffer
             </div>
           </div>
@@ -168,7 +158,7 @@
               <span>{{navlist[4].name}}</span>
               <div class="icon" :class="{active: navlist[4].ifshow}"></div>
             </div>
-            <div class="main-content" v-show="navlist[4].ifshow">
+            <div class="main-content com-context" v-show="navlist[4].ifshow">
               ergtgrdf
             </div>
           </div>
@@ -178,7 +168,7 @@
               <span>{{navlist[5].name}}</span>
               <div class="icon" :class="{active: navlist[5].ifshow}"></div>
             </div>
-            <div class="main-content" v-show="navlist[5].ifshow">
+            <div class="main-content com-context" v-show="navlist[5].ifshow">
               afsadf
             </div>
           </div>
@@ -188,7 +178,7 @@
               <span>{{navlist[6].name}}</span>
               <div class="icon" :class="{active: navlist[6].ifshow}"></div>
             </div>
-            <div class="main-content" v-show="navlist[6].ifshow">
+            <div class="main-content com-context" v-show="navlist[6].ifshow">
               法司法的是非得失
               <!-- <ul>
                 <li>
@@ -257,55 +247,71 @@
 </footer>
   </div>
 
-      <!-- 邮件 -->
-      <div class="email-us">
-        <a href="javascript:;" >
-          <img src="/img/play.png">
-          <span>Email Us</span>
-        </a>
-    </div>
-    <!-- 回到顶部 -->
-    <div class="scroll-top">
-      
-    </div>
-
-    
- <!-- 弹出挽留板块 -->
-<div class="detainment"> 
-  
-  <div class="detainment-1">
-    <img class="bye" src="/img/close.png">
-    <div class="title">Inquiry Now</div>
-    <div class="input-wrap">
+   <!-- 每个页面共用开始 -->
+  <!-- Inquiry Now -->
+  <div class="detainment hidden" id="pop1">
+    <div class="detainment-1">
+      <img class="bye1" src="/img/close.png" onclick="closeInput()">
+      <div class="title">Inquiry Now</div>
+      <div class="input-wrap">
         <div class="input-flex">
-            <div class="input"><div class="name">*Name:</div><input type="text" placeholder="Your name"></div>
-            <div class="input"><div class="name">Company:</div><input type="text"></div>
-            <div class="input"><div class="name">*Email:</div><input type="text"></div>
-            <div class="input"></div>
-            <div class="input"><div class="name">Tell:</div><input type="text"></div>
-            <div class="input"><div class="name">Whatsapp:</div><input type="text"></div>
+          <div class="input">
+            <div class="name">*Name:</div><input type="text" placeholder="Your name">
+          </div>
+          <div class="input">
+            <div class="name">Company:</div><input type="text">
+          </div>
+          <div class="input">
+            <div class="name">*Email:</div><input type="text">
+          </div>
+          <div class="input"></div>
+          <div class="input">
+            <div class="name">Tell:</div><input type="text">
+          </div>
+          <div class="input">
+            <div class="name">Whatsapp:</div><input type="text">
+          </div>
         </div>
         <div class="max-ipt input">
-            <input type="text" placeholder="*Tell us your special needs as detailed as possible">
+          <input type="text" placeholder="*Tell us your special needs as detailed as possible">
         </div>
         <div class="send">
-            <input type="submit" value="send">
+          <input type="submit" value="send">
         </div>
-    </div> 
-</div>
-  <div class="detainment-2">
-    <div class="title">Get “10 traps to buy a liquid nitrogen tank” for free 
-     <img class="bye" src="/img/close.png">
+      </div>
     </div>
-    <div class="email">
+
+  </div>
+  <!-- 挽留框 -->
+  <div class="detainment hidden" id="pop2">
+    <div class="detainment-2">
+      <div class="title">Get “10 traps to buy a liquid nitrogen tank” for free
+        <img class="bye2" src="/img/close.png" onclick="closeStay()">
+      </div>
+      <div class="email">
         <div class="input">*Email:<input type="text" placeholder="Your Email（Format must have@）"></div>
         <div class="icon"></div>
-    </div>
-    <div class="send">
+      </div>
+      <div class="send">
         <input type="submit" value="SEND">
+      </div>
     </div>
-</div>
-</div>
+  </div>
+
+
+  <!-- 邮箱板块 -->
+  <div class="email-us" onclick="openInput()">
+    <a href="javascript:;">
+      <img src="./img/email.png">
+      <span>Email Us</span>
+    </a>
+  </div>
+  <!-- 回到顶部 -->
+  <div class="scroll-top">
+
+  </div>
+  <!-- 每个页面共用结束 -->
+
 
   <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
   <script src="./js/dist/product_detail.js"></script>
